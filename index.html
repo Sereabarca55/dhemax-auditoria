@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhemax · Auditoría 360° — Diagnóstico Estratégico 2025/2026</title>
+<title>Dhemax · Auditoría 360° — Diagnóstico Estratégico y Propuesta 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,15 +19,14 @@
     --ink:#e8ecf5;
     --ink-2:#a8b1c6;
     --ink-3:#6b7590;
-    --accent:#c6ff3f;       /* lime — signature Dhemax-like */
-    --accent-2:#25d4c8;     /* teal */
+    --accent:#c6ff3f;
+    --accent-2:#25d4c8;
     --warn:#ff7a59;
     --bad:#ff4d6d;
     --good:#3ddc97;
     --gold:#f4c152;
     --grad-1:linear-gradient(135deg,#c6ff3f 0%,#25d4c8 100%);
     --grad-2:linear-gradient(135deg,#ff7a59 0%,#ff4d6d 100%);
-    --grad-dark:linear-gradient(180deg,#0f1525 0%,#0a0e1a 100%);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -41,11 +40,9 @@
   .display{font-family:"Fraunces",serif;font-weight:400;letter-spacing:-.02em}
   .mono{font-family:"JetBrains Mono",monospace}
 
-  /* ========== LAYOUT ========== */
   .shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
   @media(max-width:980px){.shell{grid-template-columns:1fr}}
 
-  /* Sidebar */
   aside{
     position:sticky;top:0;height:100vh;
     background:linear-gradient(180deg,rgba(15,21,37,.95),rgba(10,14,26,.95));
@@ -80,11 +77,9 @@
 
   .side-footer{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;color:var(--ink-3)}
 
-  /* Main */
   main{padding:40px 56px 80px;max-width:1400px;min-width:0}
   @media(max-width:980px){main{padding:28px 20px}}
 
-  /* ========== HERO ========== */
   .hero{position:relative;padding:56px 0 48px;border-bottom:1px solid var(--line);margin-bottom:56px;overflow:hidden}
   .hero::before{
     content:"";position:absolute;right:-80px;top:-60px;
@@ -109,7 +104,7 @@
     margin-bottom:18px
   }
   h1.title em{font-style:italic;color:var(--accent);font-weight:400}
-  .hero p.lead{font-size:17px;max-width:680px;color:var(--ink-2);line-height:1.6}
+  .hero p.lead{font-size:17px;max-width:700px;color:var(--ink-2);line-height:1.6}
 
   .meta-bar{
     display:grid;grid-template-columns:repeat(4,1fr);gap:0;
@@ -120,7 +115,6 @@
   .meta-bar .label{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.18em;margin-bottom:6px}
   .meta-bar .value{font-size:15px;color:var(--ink);font-weight:500}
 
-  /* ========== SECTIONS ========== */
   section.block{margin-bottom:72px;scroll-margin-top:24px}
   .section-head{margin-bottom:32px}
   .section-num{
@@ -144,7 +138,6 @@
   p{color:var(--ink-2);font-size:14.5px;line-height:1.7;margin-bottom:14px}
   strong{color:var(--ink);font-weight:600}
 
-  /* ========== CARDS & GRIDS ========== */
   .card{
     background:var(--surface);border:1px solid var(--line);
     border-radius:14px;padding:24px;position:relative;overflow:hidden
@@ -152,6 +145,7 @@
   .card.hl{background:linear-gradient(135deg,rgba(198,255,63,.04),transparent 60%);border-color:rgba(198,255,63,.15)}
   .card.warn{background:linear-gradient(135deg,rgba(255,122,89,.05),transparent 60%);border-color:rgba(255,122,89,.2)}
   .card.bad{background:linear-gradient(135deg,rgba(255,77,109,.05),transparent 60%);border-color:rgba(255,77,109,.2)}
+  .card.teal{background:linear-gradient(135deg,rgba(37,212,200,.06),transparent 60%);border-color:rgba(37,212,200,.2)}
 
   .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -159,7 +153,6 @@
   @media(max-width:900px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
   @media(max-width:1100px) and (min-width:901px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 
-  /* ========== KPI CARDS ========== */
   .kpi{
     background:var(--surface);border:1px solid var(--line);
     border-radius:14px;padding:22px;position:relative;
@@ -179,7 +172,6 @@
   .k-tag.down{background:rgba(255,77,109,.12);color:var(--bad)}
   .k-tag.flat{background:rgba(244,193,82,.12);color:var(--gold)}
 
-  /* ========== HIGHLIGHT BAR ========== */
   .highlight{
     padding:20px 24px;border-radius:12px;
     background:linear-gradient(90deg,rgba(198,255,63,.08),rgba(37,212,200,.03));
@@ -188,9 +180,8 @@
     margin:20px 0;line-height:1.65
   }
   .highlight.warn{background:linear-gradient(90deg,rgba(255,122,89,.08),rgba(255,77,109,.03));border-left-color:var(--warn)}
-  .highlight.bad{background:linear-gradient(90deg,rgba(255,77,109,.08),rgba(255,122,89,.03));border-left-color:var(--bad)}
+  .highlight.teal{background:linear-gradient(90deg,rgba(37,212,200,.08),rgba(198,255,63,.03));border-left-color:var(--accent-2)}
 
-  /* ========== LISTS ========== */
   ul.clean,ol.clean{list-style:none;padding:0;margin:12px 0}
   ul.clean li,ol.clean li{
     padding:10px 0 10px 24px;position:relative;
@@ -211,7 +202,6 @@
     background:none;width:auto;height:auto;border-radius:0
   }
 
-  /* ========== TABLE ========== */
   .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:20px 0}
   table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
   th{
@@ -233,12 +223,11 @@
   .badge.low{background:rgba(255,77,109,.15);color:var(--bad)}
   .badge.neutral{background:rgba(168,177,198,.15);color:var(--ink-2)}
 
-  /* ========== CHART WRAPPER ========== */
   .chart-wrap{position:relative;height:320px;margin:8px 0}
-  .chart-wrap.sm{height:220px}
+  .chart-wrap.sm{height:240px}
   .chart-wrap.lg{height:400px}
+  .chart-wrap.xl{height:480px}
 
-  /* ========== SWOT / QUADRANTS ========== */
   .quad{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-radius:14px;overflow:hidden}
   @media(max-width:700px){.quad{grid-template-columns:1fr}}
   .quad>div{background:var(--surface);padding:24px;min-height:180px}
@@ -248,7 +237,6 @@
   .quad li{padding:6px 0;color:var(--ink-2);font-size:13.5px;padding-left:14px;position:relative}
   .quad li::before{content:"—";position:absolute;left:0;color:var(--ink-3)}
 
-  /* ========== TIMELINE ========== */
   .timeline{position:relative;padding-left:28px;margin-top:24px}
   .timeline::before{
     content:"";position:absolute;left:8px;top:0;bottom:0;
@@ -273,18 +261,10 @@
   .t-item.late .t-range{color:var(--gold)}
   .t-title{font-weight:600;font-size:15px;color:var(--ink)}
 
-  /* ========== FUNNEL ========== */
-  .funnel-row{
-    display:grid;grid-template-columns:140px 1fr 80px;gap:16px;align-items:center;
-    padding:12px 0;border-bottom:1px solid var(--line)
-  }
-  .funnel-row:last-child{border-bottom:none}
-  .funnel-label{font-size:13px;color:var(--ink-2);font-weight:500}
-  .funnel-bar{height:28px;border-radius:6px;background:var(--grad-1);position:relative;overflow:hidden}
-  .funnel-bar .bar-label{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:#0a0e1a;font-weight:700;font-size:12px}
-  .funnel-val{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--ink);text-align:right}
+  /* Funnel SVG-like with CSS */
+  .funnel-svg{width:100%;max-width:640px;margin:20px auto;display:block}
 
-  /* ========== AWARENESS LADDER ========== */
+  /* Awareness ladder */
   .ladder{display:grid;gap:10px;margin-top:16px}
   .rung{
     display:grid;grid-template-columns:36px 160px 1fr 120px;gap:16px;align-items:center;
@@ -303,7 +283,6 @@
   .partial .rs{color:var(--gold)}
   .gap .rs{color:var(--bad)}
 
-  /* ========== COMPETITOR CARD ========== */
   .comp-card{
     background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;
     display:flex;flex-direction:column;gap:10px
@@ -314,7 +293,6 @@
   .comp-strengths{font-size:12px;color:var(--accent-2);margin-top:6px}
   .comp-weak{font-size:12px;color:var(--warn)}
 
-  /* ========== PRIORITY GRID ========== */
   .prio{display:flex;flex-direction:column;gap:12px;margin-top:18px}
   .prio-item{
     display:grid;grid-template-columns:40px 1fr 120px;gap:16px;align-items:center;
@@ -333,7 +311,6 @@
   .prio-item.critical .prio-num{color:var(--bad)}
   .prio-item.opp{border-color:rgba(198,255,63,.2);background:linear-gradient(135deg,rgba(198,255,63,.03),transparent 60%)}
 
-  /* ========== QUOTE ========== */
   .pullquote{
     font-family:"Fraunces",serif;font-weight:300;font-style:italic;
     font-size:clamp(22px,2.5vw,32px);line-height:1.3;
@@ -342,7 +319,6 @@
   .pullquote::before{content:"“";color:var(--accent);font-size:1.2em;margin-right:.1em}
   .pullquote::after{content:"”";color:var(--accent);font-size:1.2em;margin-left:.1em}
 
-  /* ========== CALLOUT ========== */
   .callout{
     border:1px solid var(--line-strong);border-radius:14px;padding:28px;
     margin:28px 0;position:relative;
@@ -354,7 +330,6 @@
   }
   .callout h4{color:var(--accent);margin-bottom:10px}
 
-  /* ========== REGION CARD ========== */
   .region{
     background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;
     display:flex;flex-direction:column;gap:8px
@@ -363,66 +338,117 @@
   .region h4{font-size:15px;color:var(--ink);text-transform:none;letter-spacing:0;margin-bottom:6px;font-weight:700}
   .region .r-size{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);margin-bottom:8px}
   .region p{font-size:13px;color:var(--ink-2);margin:0;line-height:1.55}
+  .region .r-source{font-size:10.5px;color:var(--ink-3);margin-top:8px;font-style:italic}
   .region ul{list-style:none;padding:0;margin-top:10px}
   .region li{font-size:12.5px;color:var(--ink-2);padding:4px 0 4px 12px;position:relative}
   .region li::before{content:"›";position:absolute;left:0;color:var(--accent-2)}
 
-  /* ========== DECO ========== */
   .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent);margin:48px 0}
-  .anchor{display:block;position:relative;top:-20px;visibility:hidden}
 
-  /* ========== PRINT-ISH TOP STAMP ========== */
-  .stamp{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:6px 12px;border-radius:6px;
-    background:rgba(255,77,109,.08);border:1px dashed rgba(255,77,109,.3);
-    font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--bad);
-    letter-spacing:.1em;text-transform:uppercase
+  /* Logos marquee */
+  .logos{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:16px
+  }
+  .logos .logo-pill{
+    padding:8px 14px;border-radius:100px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    font-size:12px;color:var(--ink-2);font-weight:500;letter-spacing:.01em
   }
 
-  /* footer */
+  /* Glossary */
+  .glossary{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:12px;padding:20px;margin-top:20px
+  }
+  .gloss-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;margin-top:10px}
+  @media(max-width:700px){.gloss-grid{grid-template-columns:1fr}}
+  .gloss-grid dt{font-weight:700;color:var(--ink);font-size:12.5px;font-family:"JetBrains Mono",monospace}
+  .gloss-grid dd{font-size:12.5px;color:var(--ink-2);margin-bottom:6px;line-height:1.5}
+
+  /* Scenario cards */
+  .scen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  @media(max-width:900px){.scen-grid{grid-template-columns:1fr}}
+  .scen{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:16px;padding:28px;position:relative;display:flex;flex-direction:column
+  }
+  .scen.A{border-color:rgba(37,212,200,.25);background:linear-gradient(180deg,rgba(37,212,200,.04),transparent 40%)}
+  .scen.B{border-color:rgba(198,255,63,.3);background:linear-gradient(180deg,rgba(198,255,63,.05),transparent 40%)}
+  .scen.C{border-color:rgba(244,193,82,.25);background:linear-gradient(180deg,rgba(244,193,82,.04),transparent 40%)}
+  .scen .s-letter{font-family:"Fraunces",serif;font-size:60px;line-height:1;font-weight:300;color:var(--accent-2);margin-bottom:8px}
+  .scen.B .s-letter{color:var(--accent)}
+  .scen.C .s-letter{color:var(--gold)}
+  .scen .s-tag{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
+  .scen h3{margin:0 0 8px;font-size:18px;color:var(--ink)}
+  .scen .s-fee{font-size:12px;color:var(--ink-2);padding:6px 12px;background:rgba(255,255,255,.03);border-radius:100px;display:inline-block;margin:10px 0 18px;border:1px solid var(--line)}
+  .scen.A .s-fee{color:var(--accent-2);border-color:rgba(37,212,200,.2)}
+  .scen.B .s-fee{color:var(--accent);border-color:rgba(198,255,63,.2)}
+  .scen.C .s-fee{color:var(--gold);border-color:rgba(244,193,82,.2)}
+  .scen p{font-size:13.5px;line-height:1.6}
+  .scen ul{list-style:none;padding:0;margin:10px 0 0;flex:1}
+  .scen li{font-size:12.5px;color:var(--ink-2);padding:7px 0 7px 18px;position:relative;line-height:1.5;border-bottom:1px solid var(--line)}
+  .scen li:last-child{border-bottom:none}
+  .scen li::before{content:"→";position:absolute;left:0;color:var(--accent-2)}
+  .scen.B li::before{color:var(--accent)}
+  .scen.C li::before{color:var(--gold)}
+
+  /* Archetype */
+  .archetype{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;
+    margin:20px 0
+  }
+  @media(max-width:800px){.archetype{grid-template-columns:1fr}}
+  .archetype h3{margin-top:0}
+  .arch-name{font-family:"Fraunces",serif;font-size:44px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:6px}
+  .arch-role{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:14px}
+
   footer.doc-foot{
     margin-top:80px;padding-top:32px;border-top:1px solid var(--line);
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
     font-size:12px;color:var(--ink-3)
   }
+
+  /* Bubble map wrapper */
+  .bubble-wrap{position:relative;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:16px 0}
+  .bubble-axis{font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.1em}
 </style>
 </head>
 <body>
 
 <div class="shell">
 
-  <!-- SIDEBAR -->
   <aside>
     <div class="brand">
       <div class="brand-mark">D</div>
       <div>
         <div class="brand-name">Dhemax · 360°</div>
-        <div class="brand-sub">Auditoría Estratégica</div>
+        <div class="brand-sub">Auditoría y Propuesta</div>
       </div>
     </div>
 
     <nav class="toc">
       <a href="#ctx"><span class="num">01</span><span>Contexto &amp; Diagnóstico</span></a>
-      <a href="#mercado"><span class="num">02</span><span>Mercado Global</span></a>
-      <a href="#comp"><span class="num">03</span><span>Competencia</span></a>
-      <a href="#media"><span class="num">04</span><span>Auditoría de Medios</span></a>
-      <a href="#content"><span class="num">05</span><span>Contenido &amp; Social</span></a>
-      <a href="#brand"><span class="num">06</span><span>Posicionamiento</span></a>
-      <a href="#seo"><span class="num">07</span><span>SEO &amp; Orgánico</span></a>
-      <a href="#cro"><span class="num">08</span><span>UX &amp; Conversión</span></a>
-      <a href="#data"><span class="num">09</span><span>Medición &amp; Data</span></a>
-      <a href="#plan"><span class="num">10</span><span>Plan de Acción</span></a>
-      <a href="#growth"><span class="num">11</span><span>Growth Manager POV</span></a>
+      <a href="#timeline"><span class="num">02</span><span>Línea de tiempo 2025/26</span></a>
+      <a href="#mercado"><span class="num">03</span><span>Mercado Global</span></a>
+      <a href="#comp"><span class="num">04</span><span>Competencia</span></a>
+      <a href="#media"><span class="num">05</span><span>Auditoría de Medios</span></a>
+      <a href="#content"><span class="num">06</span><span>Contenido &amp; Social</span></a>
+      <a href="#brand"><span class="num">07</span><span>Posicionamiento</span></a>
+      <a href="#seo"><span class="num">08</span><span>SEO &amp; Orgánico</span></a>
+      <a href="#cro"><span class="num">09</span><span>UX &amp; Conversión</span></a>
+      <a href="#data"><span class="num">10</span><span>Medición &amp; Tracking</span></a>
+      <a href="#recos"><span class="num">11</span><span>Recomendaciones Dhemax</span></a>
+      <a href="#scen"><span class="num">12</span><span>Escenarios de Trabajo</span></a>
+      <a href="#conclu"><span class="num">13</span><span>Conclusiones</span></a>
     </nav>
 
     <div class="side-footer">
-      Reporte interno · Cliente Dhemax<br>
-      Abril 2026 · Versión 1.0
+      Preparado por la agencia · Abril 2026<br>
+      Reporte interno · Cliente Dhemax
     </div>
   </aside>
 
-  <!-- MAIN -->
   <main>
 
     <!-- HERO -->
@@ -430,50 +456,51 @@
       <div class="tag-row">
         <span class="tag lime"><span class="dot"></span>Auditoría 360°</span>
         <span class="tag">B2B · Lead Gen · Electromovilidad</span>
-        <span class="tag teal">España · México · Colombia · Portugal</span>
+        <span class="tag teal">MX · CO · ES · PT</span>
       </div>
-      <h1 class="title">De <em>101 leads/año</em> a un motor<br>de crecimiento <em>escalable</em>.</h1>
-      <p class="lead">Diagnóstico ejecutivo y plan accionable para <strong>Dhemax</strong>, líder en soluciones de electromovilidad para flotas B2B. Análisis crítico de performance 2025, oportunidades 2026 y decisiones estratégicas para asegurar la continuidad de la cuenta y escalar calidad de leads.</p>
+      <h1 class="title">Del aprendizaje 2025<br>al <em>plan de escala</em> 2026.</h1>
+      <p class="lead">Diagnóstico ejecutivo y propuesta estratégica para <strong>Dhemax</strong>, especialista en soluciones para la electromovilidad B2B. Analizamos 14 meses de performance (2025 + ene–feb 2026), detectamos oportunidades y presentamos tres escenarios de trabajo conjunto para potenciar el próximo ciclo.</p>
 
       <div class="meta-bar">
-        <div><div class="label">Período analizado</div><div class="value">Ene 2025 — Abr 2026</div></div>
-        <div><div class="label">Canal principal</div><div class="value">Google Ads · LinkedIn · SEO</div></div>
-        <div><div class="label">Inversión Paid 2025</div><div class="value">CLP $16.0M · ~USD $16K</div></div>
-        <div><div class="label">Leads generados</div><div class="value">91 leads (Google Ads)</div></div>
+        <div><div class="label">Período analizado</div><div class="value">Enero 2025 — Febrero 2026</div></div>
+        <div><div class="label">Canal paid activo</div><div class="value">Google Ads (México)</div></div>
+        <div><div class="label">Leads paid 2025</div><div class="value">101 · CPL decreciente</div></div>
+        <div><div class="label">Leads paid 2026 (ene–feb)</div><div class="value">38 · Q1 en curso</div></div>
       </div>
     </header>
+
 
     <!-- SECTION 1 — CONTEXT -->
     <section class="block" id="ctx">
       <div class="section-head">
         <div class="section-num">01 · CONTEXTO Y DIAGNÓSTICO INICIAL</div>
-        <h2>El cliente está <em>sano</em>, pero el motor está <em>sub-escalado</em>.</h2>
-        <p class="section-intro">Dhemax es una empresa chilena con 15+ años en electromovilidad B2B, vendiendo una plataforma SaaS (CMS Dhemax) + consultoría + implementación de infraestructura a flotas de transporte, logística y operadores de redes de carga. Es el aliado técnico que habilita la transición eléctrica de actores como Bali Express, Metropol, Sotraser, Copec Voltex, FedEx, Mercado Libre, entre otros.</p>
+        <h2>Dhemax es el <em>aliado técnico</em> que habilita la transición eléctrica de las grandes flotas.</h2>
+        <p class="section-intro">Empresa chilena con más de 15 años de experiencia, opera en 7 países, gestiona +60.000 cargas al mes y +800 puntos de carga conectados. Su negocio es lead-gen B2B de ciclo largo y ticket alto, con una mezcla de software (<span class="mono">CMS</span>), app (<span class="mono">EVCA</span>) y servicios (consultoría + implementación + operación y mantenimiento).</p>
       </div>
 
       <!-- KPI ROW -->
       <div class="grid-4" style="margin-bottom:32px">
         <div class="kpi">
-          <div class="k-tag up">+450%</div>
-          <div class="k-label">Tráfico Web 2025</div>
-          <div class="k-val">86.815<span class="unit">usuarios</span></div>
-          <div class="k-sub">vs. año anterior</div>
+          <div class="k-tag up">2025</div>
+          <div class="k-label">Leads paid total</div>
+          <div class="k-val">101<span class="unit">leads</span></div>
+          <div class="k-sub">Google Ads · Curva creciente</div>
         </div>
         <div class="kpi">
-          <div class="k-tag flat">Volumen bajo</div>
-          <div class="k-label">Leads totales paid</div>
-          <div class="k-val">91<span class="unit">leads/año</span></div>
-          <div class="k-sub">~7,5 leads/mes promedio</div>
+          <div class="k-tag up">Q1 2026</div>
+          <div class="k-label">Leads ene–feb</div>
+          <div class="k-val">38<span class="unit">leads</span></div>
+          <div class="k-sub">19 + 19 mensuales</div>
         </div>
         <div class="kpi">
-          <div class="k-tag down">Alto</div>
-          <div class="k-label">CPA Promedio</div>
-          <div class="k-val">$176K<span class="unit">CLP</span></div>
-          <div class="k-sub">~USD $180 por lead</div>
+          <div class="k-tag up">-44%</div>
+          <div class="k-label">CPL · evolución</div>
+          <div class="k-val">$77K<span class="unit">CLP</span></div>
+          <div class="k-sub">Feb 26 vs. $173K en sept 25</div>
         </div>
         <div class="kpi">
           <div class="k-tag up">+80%</div>
-          <div class="k-label">Crec. LinkedIn</div>
+          <div class="k-label">Crec. LinkedIn orgánico</div>
           <div class="k-val">8.539<span class="unit">followers</span></div>
           <div class="k-sub">Engagement 124%</div>
         </div>
@@ -481,65 +508,181 @@
 
       <div class="grid-2">
         <div class="card">
-          <h4>Modelo de negocio real</h4>
-          <p style="margin-top:6px"><strong>B2B — Lead gen técnico de ciclo largo.</strong> Dhemax vende 3 productos:</p>
+          <h4>Modelo de negocio</h4>
+          <p style="margin-top:6px"><strong>B2B técnico de ciclo largo.</strong> Tres líneas:</p>
           <ul class="clean">
-            <li><strong>Dhemax CMS</strong> — software de gestión de carga (SaaS recurrente, principal motor de LTV)</li>
-            <li><strong>Dhemax EVCA</strong> — app white-label para operadores de redes públicas</li>
-            <li><strong>Servicios</strong> — consultoría, diseño de infraestructura, O&amp;M de cargadores</li>
+            <li><strong>Dhemax CMS</strong> · software de gestión de carga (producto recurrente, core de <span class="mono">LTV</span>)</li>
+            <li><strong>Dhemax EVCA</strong> · app white-label para operadores de redes públicas</li>
+            <li><strong>Servicios</strong> · consultoría integral, diseño e implementación de infraestructura, O&amp;M</li>
           </ul>
-          <p style="margin-top:10px;font-size:13px;color:var(--ink-3)">El comprador <strong>no es el conductor ni el usuario final</strong>: son gerentes de flota, jefes de mantenimiento, CFOs de transporte, directores de operaciones de logística y buscadores de incentivos (MOVES en España). Tickets probables: USD $30K—$500K+.</p>
+          <p style="margin-top:10px;font-size:13px;color:var(--ink-3)">Comprador típico: gerentes de flotas, jefes de operaciones, CFOs de transporte, directores de logística. Ticket B2B alto, decisión consultiva.</p>
         </div>
 
         <div class="card">
-          <h4>Propuesta de valor actual (web)</h4>
-          <p style="margin-top:6px"><em>"El mejor aliado para impulsar tu transición a la electromovilidad."</em></p>
-          <p>Se respalda en 7 métricas duras: <strong>+800 puntos de carga</strong>, <strong>+60.000 cargas/mes</strong>, <strong>+15 terminales en vivo</strong>, <strong>5 países</strong>, <strong>+12 GWh/mes</strong>, <strong>+1.700 vehículos/mes</strong>, <strong>+100 colaboradores</strong>, <strong>ISO 27001</strong>.</p>
-          <p style="color:var(--ink-3);font-size:13px">Logos fuertes: FedEx, Mercado Libre, Colbún, Copec Voltex, Terpel, Albemarle, Alsa, Metrobús, Carris (Portugal).</p>
+          <h4>Clientes y logos actuales</h4>
+          <p style="margin-top:6px;font-size:13.5px">Dhemax ya opera con marcas de referencia en LATAM e Iberia, lo que da tracción reputacional y material para casos de éxito:</p>
+          <div class="logos">
+            <span class="logo-pill">FedEx</span>
+            <span class="logo-pill">Mercado Libre</span>
+            <span class="logo-pill">Colbún</span>
+            <span class="logo-pill">Copec Voltex</span>
+            <span class="logo-pill">Terpel Voltex</span>
+            <span class="logo-pill">Albemarle</span>
+            <span class="logo-pill">Alsa</span>
+            <span class="logo-pill">Metrobús</span>
+            <span class="logo-pill">Metropol</span>
+            <span class="logo-pill">Carris</span>
+            <span class="logo-pill">Bali Express</span>
+            <span class="logo-pill">Trolebus</span>
+            <span class="logo-pill">Centropuerto</span>
+            <span class="logo-pill">Voltio</span>
+            <span class="logo-pill">STP</span>
+            <span class="logo-pill">PIPAU</span>
+          </div>
         </div>
       </div>
 
       <h3>Problema principal del negocio</h3>
-      <div class="highlight bad">
-        <strong>El cliente tiene una categoría en auge, una propuesta técnica sólida y logos de clase mundial, pero su motor de generación de demanda no acompaña la ambición geográfica.</strong> Con sólo 91 leads anuales via paid (7 leads/mes en promedio) y un CPA de USD $180 para un ticket B2B de seis cifras, el riesgo no es la rentabilidad unitaria — es que <strong>el volumen no permite construir un pipeline predecible</strong> en 4 mercados simultáneamente (España, México, Colombia, Portugal).
+      <div class="highlight warn">
+        <strong>Dhemax tiene ambición multi-país (MX · CO · ES · PT) en un nicho técnico y costoso, con presupuesto acotado para todos los mercados al mismo tiempo.</strong> La categoría está en pleno crecimiento, la propuesta es sólida y los logos respaldan credibilidad — pero al operar en un sector B2B con ciclos largos y <span class="mono">CPL</span> relativamente altos, el presupuesto disponible no alcanza para sostener presencia simultánea en todos los mercados objetivo. Esto obligó durante 2025 a priorizar mercados y canales, y generó la necesidad de buscar la fórmula más rentable país por país.
       </div>
 
-      <h3>Hipótesis de por qué está ocurriendo</h3>
+      <h3>Hipótesis iniciales del desempeño</h3>
       <div class="grid-2">
-        <div class="card warn">
-          <h4>H1 · Dependencia de un solo canal</h4>
-          <p><strong>100% del paid presupuesto fue a Google Search/PMax en 2025.</strong> Cero inversión en LinkedIn Ads (paradójico en B2B), cero Meta, cero programático, cero retargeting cross-channel. Search sólo captura demanda existente — no crea nueva demanda en mercados donde la categoría aún está educándose.</p>
+        <div class="card">
+          <h4>H1 · Concentración en un solo canal paid</h4>
+          <p>Hoy el 100% de la inversión paid se concentra en Google Ads. Al inicio del ciclo se hicieron pruebas en LinkedIn Ads que no generaron conversiones al nivel esperado, por lo que se consolidó todo en Google Search. Esto da foco — pero también reduce los puntos de contacto con audiencias que no están buscando activamente.</p>
         </div>
-        <div class="card warn">
-          <h4>H2 · Fragmentación geográfica sin masa crítica</h4>
-          <p><strong>Mismo presupuesto dividido en 4 países.</strong> Con CLP $16M anuales (~$4M por mercado), ningún país tiene el volumen necesario para que los algoritmos de Google optimicen. Junio, agosto y julio evidencian esto con CPAs de $609K–$746K por lead.</p>
+        <div class="card">
+          <h4>H2 · Nicho técnico con CPL naturalmente alto</h4>
+          <p>El sector electromovilidad B2B es un nicho costoso: búsquedas de bajo volumen, audiencia muy específica (gerentes de flota, operadores de redes), competencia por cada impresión relevante. El presupuesto disponible limita cuántas conversiones se pueden extraer por mes, especialmente cuando se reparte en varios países simultáneamente.</p>
         </div>
-        <div class="card warn">
-          <h4>H3 · Funnel roto en MOFU</h4>
-          <p><strong>86.815 usuarios → 91 leads = 0,10% conversión.</strong> Tasa de evento clave de <strong>0,14%</strong> vs. 1,1% del año anterior. Blog con 87% de interacción pero sólo 488 sesiones. No existe lead magnet escalado, nurturing, ni mid-funnel que capitalice el tráfico de alto volumen que sí está entrando.</p>
+        <div class="card">
+          <h4>H3 · Tensión entre canal ganador y producto a vender</h4>
+          <p>El mayor volumen de leads (y la caída del <span class="mono">CPL</span>) se logró con <strong>Search de Cargadores</strong>, pero Dhemax no es un vendedor de cargadores — es un partner integral cuyo producto estrella es el CMS y los servicios. Hay una brecha entre la intención que convierte hoy y la intención que Dhemax realmente quiere atraer a futuro.</p>
         </div>
-        <div class="card warn">
-          <h4>H4 · Dislocación geográfica vs. país meta</h4>
-          <p><strong>Colombia y México concentran 84% del tráfico</strong>, pero <strong>España aporta ~25% de los leads paid</strong> según la planilla. El grueso del tráfico orgánico viene de un país (Chile + Colombia) que no son el mercado target prioritario del cliente. <em>Audiencia equivocada optimizándose.</em></p>
+        <div class="card">
+          <h4>H4 · Lectura del tráfico distorsionada por medición</h4>
+          <p>La mayoría del tráfico orgánico viene de Chile (base natural por ser empresa chilena). El tráfico colombiano bajó cuando se pausaron las campañas, y México concentra hoy el paid. España tuvo una larga etapa con problemas de cookies que distorsionaron la medición, y sólo estabilizó la lectura en el tramo final antes de pasar a otra agencia.</p>
         </div>
-        <div class="card warn">
-          <h4>H5 · Rotación creativa inexistente</h4>
-          <p>Sólo una campaña "ganadora" (Search Cargadores) sostiene el 95% del resultado. Sin testing A/B estructurado, sin copies diferenciados por intención (flotas / consultoría / infra) pese a que las propias recomendaciones del cliente lo reconocen. <strong>Fatiga creativa latente.</strong></p>
-        </div>
-        <div class="card warn">
-          <h4>H6 · Tracking con huecos críticos</h4>
-          <p>Múltiples eventos de conversión duplicados (<span class="mono">ads_conversion_Contactar_1</span>, <span class="mono">_2</span>, <span class="mono">hubspot-form-success</span>, <span class="mono">generate_lead</span>, <span class="mono">envio_formsubmit_form_principal</span>). Imposible atribuir con precisión qué canal/campaña realmente genera MQL vs. SQL cerrados.</p>
-        </div>
+      </div>
+
+      <div class="glossary">
+        <h4>Glosario rápido · siglas usadas en este reporte</h4>
+        <dl class="gloss-grid">
+          <dt>CMS</dt><dd>Charging Management System · Sistema de Gestión de Carga (producto software de Dhemax)</dd>
+          <dt>CPO</dt><dd>Charge Point Operator · Operador de Puntos de Carga (empresa que opera estaciones públicas)</dd>
+          <dt>EVCA</dt><dd>Electric Vehicle Charging App · Aplicación de carga para usuarios finales</dd>
+          <dt>OCPP</dt><dd>Open Charge Point Protocol · Protocolo abierto para comunicar cargadores con software</dd>
+          <dt>OCPI</dt><dd>Open Charge Point Interface · Estándar de roaming entre operadores</dd>
+          <dt>CPL / CPA</dt><dd>Cost Per Lead / Cost Per Acquisition · Costo por contacto cualificado adquirido</dd>
+          <dt>CTR</dt><dd>Click-Through Rate · Porcentaje de clics sobre impresiones</dd>
+          <dt>CAGR</dt><dd>Compound Annual Growth Rate · Tasa de crecimiento anual compuesta</dd>
+          <dt>MQL / SQL</dt><dd>Marketing / Sales Qualified Lead · Lead calificado por marketing / por ventas</dd>
+          <dt>LTV</dt><dd>Lifetime Value · Valor total estimado de un cliente a lo largo de la relación</dd>
+          <dt>PMax</dt><dd>Performance Max · Tipo de campaña automatizada de Google Ads</dd>
+          <dt>TCO</dt><dd>Total Cost of Ownership · Costo total de propiedad del vehículo/flota</dd>
+        </dl>
       </div>
     </section>
 
 
-    <!-- SECTION 2 — MARKET -->
+    <!-- SECTION 2 — TIMELINE -->
+    <section class="block" id="timeline">
+      <div class="section-head">
+        <div class="section-num">02 · LÍNEA DE TIEMPO 2025 / 2026</div>
+        <h2>Un año de <em>aprendizaje real</em> que llevó a la fórmula que hoy convierte.</h2>
+        <p class="section-intro">La estrategia 2025 fue un proceso iterativo de prueba, ajuste y consolidación. Partimos vendiendo el servicio grande de Dhemax en tres países, y fuimos encontrando —mes a mes— qué canal, qué mensaje y qué mercado producían resultados sostenibles.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-range">ABR — MAY 2025</span>
+            <span class="t-title">Punto de partida: servicio grande en 3 países</span>
+          </div>
+          <p>Campañas de <strong>Performance Max</strong> para el servicio integral en <strong>México, Colombia y España</strong>. Se probó también <strong>LinkedIn Ads</strong> al inicio para explotar la audiencia B2B. 7 leads en abril y 5 en mayo. Interés mixto y exploratorio, baja intención comercial inmediata.</p>
+        </div>
+
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-range">JUN — JUL 2025</span>
+            <span class="t-title">Testeo de formatos: Demand Gen y pausa de LinkedIn</span>
+          </div>
+          <p>Se migra a <strong>Demand Gen</strong> en los mismos tres mercados buscando mejor cobertura. LinkedIn Ads se pausa al no generar conversiones al nivel esperado — el budget se concentra en Google. Junio y julio suman 5 leads totales; la campaña sigue buscando la fórmula ganadora.</p>
+        </div>
+
+        <div class="t-item mid">
+          <div class="t-head">
+            <span class="t-range">AGO — SEP 2025</span>
+            <span class="t-title">Viraje a Search Cargadores · inicio del quiebre</span>
+          </div>
+          <p>Después del aprendizaje con formatos automatizados, se prueba una campaña <strong>Search específica por cargadores en México</strong>. Agosto cierra con 7 leads; septiembre da el salto a <strong>17 leads</strong>. La combinación keyword-de-alta-intención + landing-de-producto muestra el primer patrón claro de conversión.</p>
+        </div>
+
+        <div class="t-item mid">
+          <div class="t-head">
+            <span class="t-range">OCT — DIC 2025</span>
+            <span class="t-title">Consolidación · 20 leads mensuales sostenidos</span>
+          </div>
+          <p>Search Cargadores se convierte en el motor principal. Octubre, noviembre y diciembre entregan <strong>20 leads cada mes</strong>, con un CPL que pasa de $149K a $98K CLP. En paralelo, España se transfiere a otra agencia en los últimos meses del año, reduciendo el scope geográfico.</p>
+        </div>
+
+        <div class="t-item late">
+          <div class="t-head">
+            <span class="t-range">ENE — FEB 2026</span>
+            <span class="t-title">Foco exclusivo en México · CPL en mínimos históricos</span>
+          </div>
+          <p>La agencia gestiona exclusivamente <strong>México</strong>. Enero cierra con <strong>19 leads a $92K CLP</strong>, febrero con <strong>19 leads a $77K CLP</strong> — los costos más bajos registrados hasta ahora. El modelo está probado: falta escalarlo y alinearlo con el producto que Dhemax realmente quiere vender.</p>
+        </div>
+
+      </div>
+
+      <div class="card" style="margin-top:32px">
+        <h4>Evolución mensual · inversión, leads y CPL</h4>
+        <div class="chart-wrap lg">
+          <canvas id="monthlyChart"></canvas>
+        </div>
+        <p style="font-size:12px;color:var(--ink-3);margin-top:12px;margin-bottom:0">
+          Lectura: los primeros meses (abr–jul) reflejan el período de aprendizaje con formatos automatizados. Desde septiembre, la curva de leads se estabiliza al pasar a Search Cargadores en México, y el <span class="mono">CPL</span> desciende progresivamente hasta $77K CLP en febrero 2026.
+        </p>
+      </div>
+
+      <h3>Desglose de leads por campaña · enero–febrero 2026</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mes</th>
+              <th>Campaña</th>
+              <th>Mercado</th>
+              <th>Leads</th>
+              <th>Observación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Enero 2026</td><td>Campaña Cargadores</td><td>México</td><td class="num">10</td><td>Dalton, Kivo, Henkel, Nemi Cualli, otros · mayor calidad B2B</td></tr>
+            <tr><td>Enero 2026</td><td>Campaña España</td><td>España</td><td class="num">7</td><td>Últimos leads antes del traspaso · MOVES, consultoría, hoteles Canarias</td></tr>
+            <tr><td>Enero 2026</td><td>PMax España</td><td>España</td><td class="num">1</td><td>Olinet (no calificado)</td></tr>
+            <tr><td>Enero 2026</td><td>Tráfico directo / orgánico</td><td>MX·CL·PA·CO</td><td class="num">1</td><td>Descarga de casos / documentos</td></tr>
+            <tr><td>Febrero 2026</td><td>Campaña Cargadores</td><td>México</td><td class="num">10</td><td>Pemex, Fairmont, Barceló, Inmesol, Kemper, Itanium, RCImperium · proyectos reales</td></tr>
+            <tr><td>Febrero 2026</td><td>Campaña España + PMax España</td><td>España</td><td class="num">6</td><td>Mix traspaso · varios NQL</td></tr>
+            <tr><td>Febrero 2026</td><td>Campaña Search Esp</td><td>España</td><td class="num">2</td><td>Etrica y TipGroup · alta intención</td></tr>
+            <tr><td>Febrero 2026</td><td>Orgánico / tráfico directo</td><td>MX·CL·CO</td><td class="num">1</td><td>Descarga documentos · SPC Chile interés partnership</td></tr>
+            <tr style="background:rgba(198,255,63,.05)"><td colspan="3" style="font-weight:600;color:var(--ink)">TOTAL Q1 2026 (ene + feb)</td><td class="num" style="color:var(--accent);font-weight:700">38</td><td>Marzo sin datos consolidados aún</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <!-- SECTION 3 — MARKET -->
     <section class="block" id="mercado">
       <div class="section-head">
-        <div class="section-num">02 · ANÁLISIS DE MERCADO GLOBAL</div>
-        <h2>La categoría crece al <em>29% CAGR</em>. Dhemax todavía no lo está capturando.</h2>
-        <p class="section-intro">El mercado global de cargadores para vehículos eléctricos pasa de USD $10.8B (2024) a USD $106B (2033) — CAGR 29%. Pero el ticket real del negocio de Dhemax no está en el hardware: está en el <strong>software (CMS)</strong> y la <strong>consultoría B2B</strong>, donde el cuello de botella en los 4 mercados target es operativo, no de demanda.</p>
+        <div class="section-num">03 · ANÁLISIS DE MERCADO GLOBAL</div>
+        <h2>La categoría crece al <em>29% <span class="mono" style="font-size:.7em">CAGR</span></em> global. El juego recién empieza.</h2>
+        <p class="section-intro"><strong>CAGR (Compound Annual Growth Rate · tasa de crecimiento anual compuesta) del 29%</strong> significa que el mercado casi se multiplica por 10 en una década. Dhemax está en la ola correcta, y tiene ventaja de haber partido 15 años antes del hype. Lo que sigue es capturar esa ola en los mercados adecuados.</p>
       </div>
 
       <div class="grid-4">
@@ -547,280 +690,281 @@
           <div class="r-flag">🇪🇺</div>
           <h4>Europa</h4>
           <div class="r-size">Mercado maduro · CAGR ~25%</div>
-          <p>Marco regulatorio más estricto (EU Green Deal, AFIR). España empuja con programa MOVES Flotas Plus.</p>
+          <p>Regulación más estricta (EU Green Deal, AFIR). España impulsa el programa MOVES Flotas Plus con millones en subvenciones a flotas corporativas.</p>
           <ul>
-            <li>Players fuertes: Wallbox, Zaptec, Enel X Way, Octopus Energy, Iberdrola bp pulse</li>
-            <li>CMS dominantes: Monta, AmpControl, Chargepoint, Virta, Hubject</li>
-            <li>Oportunidad: roaming OCPI, licitaciones de flotas públicas</li>
+            <li>Players: Wallbox, Zaptec, Enel X Way, Iberdrola bp pulse</li>
+            <li>CMS dominantes: Monta, Virta, AmpControl, Hubject</li>
+            <li>Oportunidad: roaming OCPI, licitaciones flotas públicas</li>
           </ul>
+          <div class="r-source">Fuente: Business Research Insights (2025), IEA Global EV Outlook 2025</div>
         </div>
         <div class="region">
           <div class="r-flag">🌎</div>
           <h4>Latinoamérica</h4>
-          <div class="r-size">En expansión · CAGR 35%+</div>
-          <p>6.000+ buses eléctricos operando. Chile, Colombia y Brasil lideran. México acelera por política fiscal.</p>
+          <div class="r-size">Expansión acelerada · CAGR 35%+</div>
+          <p>Más de 6.000 buses eléctricos ya operando en la región. Crecimiento impulsado por políticas públicas, licitaciones de transporte y adopción corporativa.</p>
           <ul>
-            <li>Chile 2.659 buses / Colombia 1.590 / México 744 / Brasil 686</li>
-            <li>Players locales: Enel X, Evergo, Copec Voltex, Voltex</li>
-            <li>Oportunidad: patios de carga para buses, licitaciones públicas</li>
+            <li>Chile 2.659 buses · Colombia 1.590 · México 744 · Brasil 686</li>
+            <li>Players: Enel X, Evergo, Copec Voltex, Terpel Voltex</li>
+            <li>Oportunidad: depots de carga, licitaciones públicas</li>
           </ul>
+          <div class="r-source">Fuente: Mobility Portal LATAM (2025), OLACDE, datos Dhemax</div>
         </div>
         <div class="region">
           <div class="r-flag">🇺🇸</div>
           <h4>Norteamérica</h4>
-          <div class="r-size">USA+Canadá · CAGR ~28%</div>
-          <p>Crecimiento vía IRA, pero con retroceso político. Concentración en corredores de flotas y depots.</p>
+          <div class="r-size">USA · CAGR ~28%</div>
+          <p>Crecimiento impulsado por la IRA (Inflation Reduction Act), aunque con cambios políticos recientes. Concentración en corredores de flotas y depots comerciales.</p>
           <ul>
-            <li>Players: ChargePoint, EVgo, Blink, Tesla Superchargers, Electrify America</li>
-            <li>Oportunidad limitada para Dhemax sin socio local / cumplimiento Buy America</li>
+            <li>Players: ChargePoint, EVgo, Blink, Electrify America</li>
+            <li>Oportunidad limitada para Dhemax sin partner local</li>
             <li>No priorizar en 2026</li>
           </ul>
+          <div class="r-source">Fuente: BloombergNEF Electric Vehicle Outlook 2025</div>
         </div>
         <div class="region">
           <div class="r-flag">🌏</div>
           <h4>Asia</h4>
-          <div class="r-size">China domina · Europa sigue</div>
-          <p>Mercado cerrado para Dhemax (players locales hipercompetitivos, BYD + Huawei integrados).</p>
+          <div class="r-size">China domina · Resto sigue</div>
+          <p>Mercado altamente verticalizado (BYD, Huawei, NIO integrados). Barreras altas para entrada de players externos.</p>
           <ul>
-            <li>No priorizar. Posible exploración vía partners en SE Asia 2027+</li>
+            <li>No priorizar · foco de observación</li>
             <li>Seguir tendencias (V2G, carga bidireccional, 720 kW)</li>
-            <li>Sin inversión recomendada</li>
+            <li>Aprender de estándares emergentes (GBT)</li>
           </ul>
+          <div class="r-source">Fuente: IEA Global EV Outlook 2025, VEGA Chargers (entrevista Mobility Portal)</div>
         </div>
       </div>
 
       <div class="callout">
-        <h4>Insights accionables (no descriptivos)</h4>
+        <h4>Insights accionables</h4>
         <ol class="clean">
-          <li><strong>La "brecha de ejecución" supera a la "brecha de demanda".</strong> En México y Colombia, las empresas ya quieren electrificar pero chocan con operación real: quién instala, quién mantiene, qué software gestiona. Dhemax es justamente ese puente — su mensaje <strong>no debe ser "somos los mejores"</strong>, sino "resolvemos lo que nadie más resuelve: el día después del cargador".</li>
-          <li><strong>España 2026 = cosecha MOVES Flotas Plus.</strong> El programa reparte millones en subvenciones con deadlines concretos. La campaña Moves Flotas existe pero produjo 0 leads en los meses medidos. Es el canal de menor esfuerzo / mayor palanca — requiere un rediseño completo de mensaje (urgencia regulatoria, co-financiación, ROI acelerado) y landing específica.</li>
-          <li><strong>Portugal es el mercado olvidado.</strong> Carris ya es cliente. No existe campaña paid activa en Portugal según los reportes. Mercado pequeño pero con licitaciones públicas grandes (Lisboa, Porto) y poca competencia digital local.</li>
-          <li><strong>La audiencia B2B real no está buscando en Google en LATAM</strong> — está en LinkedIn, en asociaciones (AMIVE, ANDEMOS, AVERE), en webinars y en eventos presenciales. Dhemax invierte 0€ en ABM.</li>
+          <li><strong>En LATAM, la brecha que gana es la de ejecución, no la de demanda.</strong> Las empresas ya quieren electrificar — lo que no tienen claro es quién instala, quién mantiene y qué software integra todo. Ese es el terreno de Dhemax.</li>
+          <li><strong>España con MOVES Flotas Plus es una ventana temporal concreta.</strong> El programa tiene plazos y cupos. Aunque hoy España no está en el scope directo de la agencia, vale la pena considerarlo en los escenarios de ampliación.</li>
+          <li><strong>Portugal es un mercado con poca competencia digital local.</strong> Carris ya es cliente Dhemax. Las licitaciones de Lisboa y Porto son objetivos naturales para estirar la marca en Iberia.</li>
+          <li><strong>La decisión B2B en electromovilidad no se toma en Google.</strong> Se toma en ferias, asociaciones sectoriales y referencias. El trabajo digital debe amplificar esos puntos de contacto, no reemplazarlos.</li>
         </ol>
       </div>
+
+      <h3>Fuentes consultadas</h3>
+      <ul class="clean">
+        <li><strong>IEA Global EV Outlook 2025</strong> · Agencia Internacional de Energía · tamaño global, proyecciones, smart charging</li>
+        <li><strong>BloombergNEF Electric Vehicle Outlook 2025</strong> · rentabilidad y expansión del ecosistema</li>
+        <li><strong>Business Research Insights · Electric Car Chargers Market Report 2025</strong> · CAGR 29%, USD 10.8B → 106B (2024–2033)</li>
+        <li><strong>Mobility Portal LATAM</strong> · datos de adopción regional, licitaciones, entrevistas a players</li>
+        <li><strong>OLACDE</strong> · Organización Latinoamericana y Caribeña de Energía · políticas públicas</li>
+        <li><strong>Informe anual Dhemax 2025</strong> · datos propios de GA4, Google Ads, LinkedIn</li>
+      </ul>
     </section>
 
 
-    <!-- SECTION 3 — COMPETITION -->
+    <!-- SECTION 4 — COMPETITION -->
     <section class="block" id="comp">
       <div class="section-head">
-        <div class="section-num">03 · ANÁLISIS DE COMPETENCIA</div>
-        <h2>Dhemax compite contra <em>hardware sellers</em> que no saben vender software.</h2>
-        <p class="section-intro">Las estadísticas de subasta de Google Ads muestran a Dhemax compitiendo principalmente con vendedores de cargadores retail (Amazon MX, Octopus Energy ES, cargadoresdecocheselectricos.es). <strong>Esto es una buena noticia y a la vez el problema.</strong></p>
+        <div class="section-num">04 · ANÁLISIS DE COMPETENCIA</div>
+        <h2>Dhemax juega en un <em>espacio poco disputado</em> — especialista agnóstico hispanohablante.</h2>
+        <p class="section-intro">La competencia real en el mercado hispano-latino es fragmentada: vendedores de hardware que agregan software, grandes utilities que hacen consultoría, y un puñado de plataformas SaaS europeas que aún no hablan español.</p>
       </div>
 
-      <h3>Competidores directos identificados</h3>
+      <h3>Mapa de posicionamiento competitivo</h3>
+      <div class="bubble-wrap">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+          <span class="bubble-axis">← Enfoque en hardware</span>
+          <span class="bubble-axis">Enfoque en software (CMS) →</span>
+        </div>
+        <div class="chart-wrap" style="height:460px">
+          <canvas id="bubbleChart"></canvas>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--ink-3)">
+          <span>Tamaño de la burbuja = presencia digital / alcance estimado. Eje Y = foco geográfico en LATAM/Iberia (arriba = fuerte).</span>
+        </div>
+      </div>
+
+      <h3>Competidores directos por categoría</h3>
       <div class="grid-3">
         <div class="comp-card">
           <span class="comp-tag">Software CMS · Europa</span>
           <h5>Monta</h5>
-          <p>Danesa, unicornio del CPO SaaS. Product-led growth brutal, free tier, onboarding 5 min.</p>
-          <div class="comp-strengths">+ Marketing de producto, comunidad, transparencia</div>
-          <div class="comp-weak">− Poca presencia en transporte pesado / buses</div>
+          <p>Danesa. Líder SaaS con product-led growth fuerte, onboarding rápido y comunidad activa.</p>
+          <div class="comp-strengths">+ Marketing de producto y transparencia</div>
+          <div class="comp-weak">− Poco foco en transporte pesado / buses</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">Software CMS · Europa</span>
+          <span class="comp-tag">Software CMS · EU+US</span>
           <h5>AmpControl</h5>
-          <p>US + EU, foco en fleets grandes. Venta consultiva tech-heavy.</p>
-          <div class="comp-strengths">+ Integración OEMs, partnerships estratégicos</div>
-          <div class="comp-weak">− Precio alto, poca visibilidad en PYME</div>
+          <p>Foco en fleets grandes. Venta consultiva orientada a integraciones con OEMs.</p>
+          <div class="comp-strengths">+ Alianzas con OEMs y partnerships</div>
+          <div class="comp-weak">− Ticket alto, sin presencia hispana</div>
         </div>
         <div class="comp-card">
           <span class="comp-tag">Hardware + CMS · Global</span>
           <h5>Wallbox</h5>
-          <p>Cotizada, líder EU con software propio (myWallbox Business).</p>
-          <div class="comp-strengths">+ Brand recognition, red de distribuidores</div>
-          <div class="comp-weak">− Software débil vs. pure-play CMS, foco en hardware</div>
+          <p>Empresa cotizada, líder en hardware con plataforma myWallbox Business integrada.</p>
+          <div class="comp-strengths">+ Reconocimiento de marca y distribuidores</div>
+          <div class="comp-weak">− Software secundario al hardware</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">Operador CPO · España</span>
-          <h5>Iberdrola bp pulse / Endesa X</h5>
-          <p>Enormes en CPO. Hacen software interno pero no lo venden a terceros.</p>
+          <span class="comp-tag">CPO · España</span>
+          <h5>Iberdrola bp pulse · Endesa X</h5>
+          <p>Grandes utilities operando redes de carga. Desarrollan software interno pero no lo venden a terceros.</p>
           <div class="comp-strengths">+ Escala, capital, relaciones institucionales</div>
-          <div class="comp-weak">− No venden software — no son competencia real, son potenciales clientes/partners</div>
+          <div class="comp-weak">− No competencia directa — potenciales partners</div>
         </div>
         <div class="comp-card">
           <span class="comp-tag">CPO · LATAM</span>
           <h5>Evergo</h5>
-          <p>Dominicana-Centroamérica, instalan y operan. Marca retail fuerte.</p>
-          <div class="comp-strengths">+ Penetración en hospitality y dealers</div>
-          <div class="comp-weak">− Foco B2C/retail, débiles en flotas pesadas</div>
-        </div>
-        <div class="comp-card">
-          <span class="comp-tag">CPO · LATAM</span>
-          <h5>Copec Voltex / Terpel Voltex</h5>
-          <p>Operadores de estaciones. YA SON CLIENTES / PARTNERS Dhemax.</p>
-          <div class="comp-strengths">+ Ecosistema de combustibles tradicional</div>
-          <div class="comp-weak">− No son competencia — son canal/partner</div>
+          <p>Operador dominicano-centroamericano. Red retail fuerte en hospitality y dealers.</p>
+          <div class="comp-strengths">+ Penetración en B2C y edificios residenciales</div>
+          <div class="comp-weak">− Débil en flotas pesadas y software avanzado</div>
         </div>
         <div class="comp-card">
           <span class="comp-tag">Hardware · LATAM</span>
           <h5>VEGA Chargers</h5>
-          <p>Española operando LATAM con cargadores 40–80 kW.</p>
-          <div class="comp-strengths">+ Producto, local support en 2025</div>
+          <p>Española con cargadores 40–80 kW desplegándose en LATAM.</p>
+          <div class="comp-strengths">+ Producto técnico competitivo</div>
           <div class="comp-weak">− Hardware-first, software incipiente</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">Consultoría · LATAM</span>
-          <h5>Enel X Way / Schneider Electric</h5>
-          <p>Ofertas de consultoría de electromovilidad corporativa.</p>
-          <div class="comp-strengths">+ Red global, credibilidad, ticket grande</div>
-          <div class="comp-weak">− Lentos, inflexibles, caros. Dhemax = ágil.</div>
+          <span class="comp-tag">Consultoría · Global</span>
+          <h5>Enel X Way · Schneider Electric</h5>
+          <p>Grandes consultoras de electromovilidad corporativa con oferta end-to-end.</p>
+          <div class="comp-strengths">+ Red global y credibilidad enterprise</div>
+          <div class="comp-weak">− Lentas, caras, inflexibles</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">CMS especializado · Global</span>
-          <h5>Virta, Driivz, Etrel</h5>
-          <p>Plataformas CMS white-label competencia directa del producto core.</p>
-          <div class="comp-strengths">+ Presencia EU, track record</div>
+          <span class="comp-tag">CMS · Global</span>
+          <h5>Virta · Driivz · Etrel</h5>
+          <p>Plataformas CMS white-label europeas, competencia directa del producto core.</p>
+          <div class="comp-strengths">+ Track record EU y escala</div>
           <div class="comp-weak">− No hablan español, poco foco en LATAM</div>
+        </div>
+        <div class="comp-card hl">
+          <span class="comp-tag" style="color:var(--accent)">Posición Dhemax</span>
+          <h5 style="color:var(--accent)">Dhemax</h5>
+          <p>Especialista hispano-latino. CMS + consultoría + O&amp;M integrados. Independiente del fabricante de hardware, compatible vía OCPP 1.6.</p>
+          <div class="comp-strengths">+ Único agnóstico en su geografía + 15 años de trayectoria</div>
         </div>
       </div>
 
       <h3>Referentes aspiracionales (best-in-class)</h3>
       <div class="grid-3">
         <div class="comp-card">
-          <span class="comp-tag">Referente #1 · Marketing B2B</span>
+          <span class="comp-tag">Referente · Content B2B</span>
           <h5>Gong.io</h5>
-          <p>Dominan el content marketing B2B SaaS con data-driven playbooks. Literalmente educan a la categoría.</p>
-          <div class="comp-strengths">Aprender: informes propios con data ("State of EV Fleets"), LinkedIn orgánico obsesivo</div>
+          <p>Marketing B2B SaaS data-driven. Educan a la categoría con informes propios.</p>
+          <div class="comp-strengths">Aprender: informes firmados + LinkedIn orgánico intensivo</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">Referente #2 · Product marketing</span>
+          <span class="comp-tag">Referente · Product marketing</span>
           <h5>Monta</h5>
-          <p>Storytelling de electromovilidad accesible. Diseño memorable, voice-of-customer brutal.</p>
-          <div class="comp-strengths">Aprender: convertir casos de uso técnicos en narrativas</div>
+          <p>Storytelling accesible de electromovilidad, diseño memorable.</p>
+          <div class="comp-strengths">Aprender: casos de uso contados como narrativa</div>
         </div>
         <div class="comp-card">
-          <span class="comp-tag">Referente #3 · ABM</span>
+          <span class="comp-tag">Referente · ABM B2B</span>
           <h5>Optibus</h5>
-          <p>Ya partner de Dhemax. Mastermind en ABM para transporte público. Llegan a CEOs con webinars temáticos.</p>
+          <p>Partner actual de Dhemax. Maestros en ABM para transporte público.</p>
           <div class="comp-strengths">Aprender: event-led growth + referral industry</div>
-        </div>
-        <div class="comp-card">
-          <span class="comp-tag">Referente #4 · Comunidad</span>
-          <h5>Zaptec</h5>
-          <p>Noruegos obsesivos con diseño y experiencia. Su website parece de Apple.</p>
-          <div class="comp-strengths">Aprender: brand + design como moat competitivo</div>
-        </div>
-        <div class="comp-card">
-          <span class="comp-tag">Referente #5 · Data storytelling</span>
-          <h5>BloombergNEF / IEA Global EV Outlook</h5>
-          <p>No son competencia: son la fuente. Dhemax debería <em>citarse en</em> sus reportes.</p>
-          <div class="comp-strengths">Aprender: reporte anual LATAM firmado por Dhemax = trampa de backlinks y PR</div>
         </div>
       </div>
 
-      <h3>Espacios de posicionamiento libres</h3>
+      <h3>Espacios libres de posicionamiento</h3>
       <div class="quad">
         <div>
-          <div class="qh"><span class="d" style="background:var(--good)"></span>OCÉANO AZUL #1</div>
-          <strong style="color:var(--ink);display:block;margin-bottom:8px">"El CMS que habla español"</strong>
-          <p style="font-size:13px">Ningún competidor europeo domina el mercado hispanohablante con soporte local, documentación en español, y comprensión cultural de flotas LATAM + IB. Dhemax <em>ya es eso</em> pero no lo dice.</p>
+          <div class="qh"><span class="d" style="background:var(--good)"></span>Océano azul · Especialista hispano-latino</div>
+          <strong style="color:var(--ink);display:block;margin-bottom:8px">"El CMS que entiende tu mercado"</strong>
+          <p style="font-size:13px">Ningún competidor europeo domina el mercado hispanohablante con soporte local, documentación en español y conocimiento del contexto regulatorio de LATAM e Iberia. Dhemax ya es eso pero no lo dice con fuerza.</p>
         </div>
         <div>
-          <div class="qh"><span class="d" style="background:var(--good)"></span>OCÉANO AZUL #2</div>
-          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Partner neutral vs. vendor del hardware"</strong>
-          <p style="font-size:13px">Wallbox vende su hardware, Monta empuja su ecosistema. Dhemax es <strong>agnóstico al hardware</strong> vía OCPP 1.6. Esto es oro puro para clientes que no quieren lock-in. Comunicarlo agresivamente.</p>
+          <div class="qh"><span class="d" style="background:var(--good)"></span>Océano azul · Independencia del fabricante</div>
+          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Compatible con cualquier cargador"</strong>
+          <p style="font-size:13px">Wallbox vende su hardware y su software juntos; Monta empuja su ecosistema. Dhemax funciona con <em>cualquier</em> cargador vía OCPP 1.6 — esto es diferencial para clientes que ya tienen infraestructura instalada o que no quieren amarrarse a un fabricante. Es un argumento de venta fuerte que hoy no se comunica.</p>
         </div>
         <div>
-          <div class="qh"><span class="d" style="background:var(--accent-2)"></span>OCÉANO AZUL #3</div>
-          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Experts en electroterminales / depots"</strong>
-          <p style="font-size:13px">Dhemax ya operó uno de los 5 depots más grandes del mundo ("El Conquistador", Santiago). Este ángulo está infra-explotado: nadie más tiene ese case study en LATAM.</p>
+          <div class="qh"><span class="d" style="background:var(--accent-2)"></span>Océano azul · Electroterminales de gran escala</div>
+          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Expertos en depots de buses eléctricos"</strong>
+          <p style="font-size:13px">Dhemax operó "El Conquistador", uno de los 5 depots de carga más grandes del mundo. Este caso, contado bien, diferencia a Dhemax de cualquier competidor en LATAM.</p>
         </div>
         <div>
-          <div class="qh"><span class="d" style="background:var(--warn)"></span>ESPACIO EN DISPUTA</div>
-          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Consultor técnico de transición"</strong>
-          <p style="font-size:13px">Competido por Enel X, Schneider, consultoras big-4. Dhemax puede ganar <em>si</em> empaqueta productos fijos con precio transparente (algo que las big no hacen).</p>
+          <div class="qh"><span class="d" style="background:var(--accent-2)"></span>Océano azul · Ticket medio con servicio premium</div>
+          <strong style="color:var(--ink);display:block;margin-bottom:8px">"Consultoría enterprise sin fricción big-4"</strong>
+          <p style="font-size:13px">Entre consultoras globales caras y lentas (Enel X, Schneider) y pure-play SaaS europeos sin acompañamiento, Dhemax ocupa el punto medio: software + consultoría local, con un equipo de +100 expertos. Comunicar esa calidad-precio es una oportunidad.</p>
         </div>
       </div>
     </section>
 
 
-    <!-- SECTION 4 — MEDIA AUDIT -->
+    <!-- SECTION 5 — MEDIA AUDIT -->
     <section class="block" id="media">
       <div class="section-head">
-        <div class="section-num">04 · AUDITORÍA DE PAUTA DE MEDIOS</div>
-        <h2>El año <em>se ganó en el Q4</em>. Ahora hay que entender qué funcionó (y qué NO se está haciendo).</h2>
-        <p class="section-intro">Del análisis de la planilla Performance 2025/2026 surge una historia clara: tras 5 meses de experimentación cara y errática, a partir de septiembre la cuenta encontró su punto de inflexión concentrándose en Search Cargadores. El desafío 2026 es escalar SIN romper lo que funciona.</p>
-      </div>
-
-      <!-- Monthly performance chart -->
-      <div class="card" style="margin-bottom:24px">
-        <h4>Evolución mensual 2025 · Inversión vs. Leads vs. CPA</h4>
-        <div class="chart-wrap lg">
-          <canvas id="monthlyChart"></canvas>
-        </div>
-        <p style="font-size:12px;color:var(--ink-3);margin-top:12px;margin-bottom:0">
-          Abril → Agosto: <strong style="color:var(--warn)">experimentación costosa</strong> con PMax y Demand Gen · Septiembre → Diciembre: <strong style="color:var(--good)">consolidación en Search Cargadores</strong>, CPA baja de $173K a $103K, volumen sube 4x.
-        </p>
+        <div class="section-num">05 · AUDITORÍA DE PAUTA DE MEDIOS</div>
+        <h2>El viraje a <em>Search de intención</em> fue acertado. Ahora falta conectarlo con el producto a vender.</h2>
+        <p class="section-intro">La historia de la pauta en 2025 es la de un aprendizaje iterativo: partimos en 3 países con el servicio grande, pasamos por varios formatos, y terminamos con un modelo de Search Cargadores en México que estabiliza resultados y baja costos. La siguiente etapa es usar ese modelo ganador como base para traer de vuelta la intención del servicio grande.</p>
       </div>
 
       <div class="grid-2">
         <div>
-          <h3>Diagnóstico técnico estructural</h3>
+          <h3>Lo que mostró el aprendizaje 2025</h3>
           <ul class="clean">
-            <li><strong>Sobre-fragmentación de campañas:</strong> 5+ tipos de campaña (Search Cargadores, PMax MX/COL, PMax España, Demand Gen MX/COL, Demand Gen España, Moves Flotas) compitiendo por presupuesto limitado ($1–3M CLP/mes).</li>
-            <li><strong>Experimentación sin presupuesto mínimo por algoritmo:</strong> PMax y Demand Gen en mercados B2B requieren 30+ conversiones/mes para salir del modo aprendizaje. La cuenta nunca llegó ahí.</li>
-            <li><strong>Junio fue un desastre silenciado en el reporte:</strong> $1.218.260 invertidos = 2 leads = <strong>CPA $609K</strong>. Octubre superó en eficiencia un 84%.</li>
-            <li><strong>0 inversión en LinkedIn Ads:</strong> siendo B2B técnico con 8.539 followers orgánicos, es la pauta más obvia del mundo que no se está haciendo.</li>
-            <li><strong>Agosto = 0 conversiones</strong> pese a invertir CLP $1.87M. El reporte anual lo oculta detrás del "punto de inflexión de septiembre".</li>
-            <li><strong>Moves Flotas sin resultados</strong> pese a ser el programa paraguas regulatorio más potente del mercado español.</li>
+            <li><strong>Las campañas automatizadas (PMax y Demand Gen) necesitan más volumen del que un nicho técnico puede alimentar.</strong> Al no recibir suficientes conversiones mensuales, los algoritmos no salen bien del período de aprendizaje.</li>
+            <li><strong>LinkedIn Ads al inicio no convirtió al nivel esperado</strong>, por lo que se pausó y el budget se concentró en Google. Es un canal lógico para B2B, pero requiere estructura distinta (ABM, contenido nativo, audiencias por cargo).</li>
+            <li><strong>Search con keywords de alta intención es lo que encaja con este nicho.</strong> Volumen bajo pero calidad alta. 10,35% de CTR en el Q4, cifra muy por encima del benchmark B2B.</li>
+            <li><strong>Moves Flotas Plus</strong>, pese a ser un programa regulatorio potente en España, no generó clics ni conversiones medibles cuando se activó la campaña. Posible problema de configuración de audiencias o de relevancia del copy para la intención buscada.</li>
+            <li><strong>La reducción de scope geográfico</strong> (ES → traspaso, CO → pausa, MX → foco único) permitió que el presupuesto concentrado en un país hiciera cada peso invertido más efectivo.</li>
           </ul>
         </div>
         <div>
-          <h3>KPIs anuales clave</h3>
+          <h3>KPIs del ciclo completo</h3>
           <div class="table-wrap">
             <table>
-              <thead>
-                <tr><th>KPI</th><th>Valor 2025</th><th>Benchmark B2B</th><th>Estado</th></tr>
-              </thead>
+              <thead><tr><th>KPI</th><th>Valor</th><th>Lectura</th></tr></thead>
               <tbody>
-                <tr><td>Inversión total</td><td class="num">$16.038.033</td><td class="num">—</td><td><span class="badge neutral">Ref</span></td></tr>
-                <tr><td>Leads</td><td class="num">91</td><td class="num">150–200</td><td><span class="badge low">Bajo</span></td></tr>
-                <tr><td>CPA promedio</td><td class="num">$176.242</td><td class="num">$80–150K</td><td><span class="badge mid">Alto</span></td></tr>
-                <tr><td>Clics</td><td class="num">170.306</td><td class="num">—</td><td><span class="badge neutral">Ref</span></td></tr>
-                <tr><td>CPC promedio</td><td class="num">$456</td><td class="num">$300–600</td><td><span class="badge high">OK</span></td></tr>
-                <tr><td>CTR Search (Q4)</td><td class="num">10,35%</td><td class="num">4–6%</td><td><span class="badge high">Top</span></td></tr>
-                <tr><td>Cuota impresiones</td><td class="num">14,46%</td><td class="num">25–40%</td><td><span class="badge low">Bajo</span></td></tr>
-                <tr><td>Impr. top absoluto</td><td class="num">47,94%</td><td class="num">&gt;40%</td><td><span class="badge high">OK</span></td></tr>
-                <tr><td>Conv rate web</td><td class="num">0,10%</td><td class="num">0,8–2%</td><td><span class="badge low">Crítico</span></td></tr>
+                <tr><td>Leads 2025</td><td class="num">101</td><td><span class="badge neutral">Base</span></td></tr>
+                <tr><td>Leads ene–feb 2026</td><td class="num">38</td><td><span class="badge high">Proyecta +50% YoY</span></td></tr>
+                <tr><td>CPL mínimo (feb 2026)</td><td class="num">$77K</td><td><span class="badge high">Óptimo</span></td></tr>
+                <tr><td>CTR Q4 2025</td><td class="num">10,35%</td><td><span class="badge high">Sobre benchmark</span></td></tr>
+                <tr><td>Cuota de impresiones</td><td class="num">14,46%</td><td><span class="badge mid">Con recorrido</span></td></tr>
+                <tr><td>Impresiones top absoluto</td><td class="num">47,94%</td><td><span class="badge high">Buena posición</span></td></tr>
+                <tr><td>Costo por clic promedio</td><td class="num">$456</td><td><span class="badge high">Dentro de rango</span></td></tr>
               </tbody>
             </table>
           </div>
+          <p style="font-size:12.5px;color:var(--ink-3);margin-top:8px">El CTR del 10,35% en Q4 es particularmente destacable: indica que los anuncios están siendo relevantes para quienes los ven. La oportunidad está en ampliar <em>a cuántos</em> los mostramos (subir cuota de impresiones).</p>
         </div>
       </div>
 
-      <h3>Cuellos de botella detectados</h3>
+      <h3>Oportunidades de escala</h3>
       <div class="grid-3">
-        <div class="card bad">
-          <h4 style="color:var(--bad)">Cuello #1 · Cuota de impresiones</h4>
-          <p style="font-size:13.5px">Sólo <strong>14,46%</strong> de las búsquedas relevantes están viendo a Dhemax. Aquí hay al menos <strong>60% de headroom sin tocar nada</strong>. Subir impression share sólo requiere más presupuesto en las keywords ya ganadoras.</p>
+        <div class="card hl">
+          <h4 style="color:var(--accent)">Oportunidad · Subir cuota de impresiones</h4>
+          <p style="font-size:13.5px">Con 14,46% de share, aparecemos en una de cada 7 búsquedas relevantes. Subir al 25–30% con las mismas keywords ganadoras requiere sólo más presupuesto en el canal que ya funciona.</p>
         </div>
-        <div class="card bad">
-          <h4 style="color:var(--bad)">Cuello #2 · Conv rate en landing</h4>
-          <p style="font-size:13.5px">0,10% de conversión significa que de <strong>86.815 usuarios, sólo 91 levantaron la mano</strong>. Con 86.815 usuarios, incluso subir a 0,5% (realista) daría <strong>~430 leads</strong>. El problema NO es tráfico — es fricción.</p>
+        <div class="card hl">
+          <h4 style="color:var(--accent)">Oportunidad · Reintroducir el servicio grande</h4>
+          <p style="font-size:13.5px">Una vez estabilizado Search Cargadores como motor de leads cortos, se puede añadir una segunda campaña Search de "consultoría + CMS" con keywords de mayor intención empresarial, calibrada con señales de calidad de HubSpot.</p>
         </div>
-        <div class="card bad">
-          <h4 style="color:var(--bad)">Cuello #3 · Calificación post-lead</h4>
-          <p style="font-size:13.5px">La planilla de leads muestra un % importante como "not qualified", "uso personal" o "descarga documento". Sin tagging de calidad en upload a Ads (offline conversions), el algoritmo optimiza hacia volumen — no hacia calidad.</p>
+        <div class="card hl">
+          <h4 style="color:var(--accent)">Oportunidad · Expandir a Colombia controladamente</h4>
+          <p style="font-size:13.5px">Colombia mostró tráfico orgánico fuerte mientras hubo campañas. Reactivar con el modelo Search Cargadores (en lugar de PMax) podría replicar el patrón mexicano con mínimo riesgo.</p>
         </div>
       </div>
 
-      <h3>Distribución de leads por canal/campaña (2025)</h3>
+      <h3>Distribución real de leads por tipo de campaña (2025 + Q1 2026)</h3>
       <div class="card">
         <div class="chart-wrap sm">
           <canvas id="campChart"></canvas>
         </div>
+        <p style="font-size:12px;color:var(--ink-3);margin-top:10px;margin-bottom:0">Nota metodológica: desglose basado en la planilla de leads paid consolidada. "Campaña Cargadores" concentra el grueso de leads B2B calificados en México.</p>
       </div>
     </section>
 
 
-    <!-- SECTION 5 — CONTENT -->
+    <!-- SECTION 6 — CONTENT -->
     <section class="block" id="content">
       <div class="section-head">
-        <div class="section-num">05 · CONTENIDO Y REDES SOCIALES</div>
-        <h2>LinkedIn: un <em>motor sub-explotado</em> con 124% de engagement.</h2>
-        <p class="section-intro">Dhemax creció 80% en followers LinkedIn, logró 207K impresiones, 4.126 reacciones y 3.802 seguidores netos. El newsletter "Carga Máxima" llegó a 2.427 visualizaciones mensuales. <strong>Es, por lejos, el activo orgánico más sólido de la cuenta. Y nadie está amplificándolo con presupuesto.</strong></p>
+        <div class="section-num">06 · CONTENIDO Y REDES SOCIALES</div>
+        <h2>LinkedIn orgánico es el <em>motor silencioso</em> con 124% de engagement.</h2>
+        <p class="section-intro">Mientras Google Ads captura demanda existente, el trabajo orgánico en LinkedIn construye marca y autoridad. 207.052 impresiones, +3.800 nuevos seguidores, y un engagement muy por encima del promedio de la industria. Es el mejor activo orgánico de Dhemax y tiene mucho por dar todavía.</p>
       </div>
 
       <div class="grid-4">
@@ -831,140 +975,149 @@
           <div class="k-sub">4.740 → 8.539 en 10 meses</div>
         </div>
         <div class="kpi">
-          <div class="k-tag up">Top tier</div>
-          <div class="k-label">Engagement rate</div>
-          <div class="k-val">124%<span class="unit">LI</span></div>
+          <div class="k-tag up">Top</div>
+          <div class="k-label">Engagement LinkedIn</div>
+          <div class="k-val">124%</div>
           <div class="k-sub">Benchmark industria: 1–5%</div>
         </div>
         <div class="kpi">
           <div class="k-tag up">Exc.</div>
-          <div class="k-label">Impresiones 2025</div>
+          <div class="k-label">Impresiones orgánicas 2025</div>
           <div class="k-val">207K</div>
           <div class="k-sub">191 publicaciones</div>
         </div>
         <div class="kpi">
-          <div class="k-tag flat">Bajo</div>
-          <div class="k-label">Conv. suscriptor (Q4)</div>
+          <div class="k-tag flat">Mejorable</div>
+          <div class="k-label">Conv. suscriptor newsletter</div>
           <div class="k-val">2,8%</div>
-          <div class="k-sub">2.405 vistas → 64 subs (nov)</div>
+          <div class="k-sub">Nov 25 · espacio para CTA más claro</div>
         </div>
       </div>
 
       <h3>Análisis por niveles de conciencia (Eugene Schwartz)</h3>
+      <p style="font-size:13.5px">El modelo de Eugene Schwartz clasifica a las audiencias en 5 niveles según lo que saben del problema y la solución. Idealmente, una marca B2B debería tener contenido para cada nivel. Dhemax hoy concentra su esfuerzo en los niveles medios-altos.</p>
       <div class="ladder">
         <div class="rung gap">
           <div class="rn">01</div>
           <div class="rt">Unaware</div>
-          <div class="rc">Gerentes de flotas que <em>no saben</em> que existen soluciones de software para optimizar costos de carga. Aún piensan que la electromovilidad = comprar cargadores y listo.</div>
-          <div class="rs">GAP TOTAL</div>
+          <div class="rc">Gerentes de flotas que aún no saben que existen soluciones de software para optimizar costos de carga. Piensan que la electromovilidad se resuelve comprando cargadores.</div>
+          <div class="rs">Sin cobertura</div>
         </div>
         <div class="rung partial">
           <div class="rn">02</div>
           <div class="rt">Problem aware</div>
-          <div class="rc">Operadores que <em>ya sufren</em> sobrecostos de energía, peaks tarifarios, fallas de cargadores, pero no saben que "Charging Management System" es la categoría solución.</div>
-          <div class="rs">PARCIAL</div>
+          <div class="rc">Operadores que ya sufren peaks tarifarios y fallas operativas, pero no saben que "Charging Management System" es la categoría-solución.</div>
+          <div class="rs">Parcial</div>
         </div>
         <div class="rung covered">
           <div class="rn">03</div>
           <div class="rt">Solution aware</div>
-          <div class="rc">Empresas que saben que necesitan un CMS, están comparando alternativas. Consumen blogs técnicos (Peak Shaving, TCO, ISO 27001), buscan "software de gestión cargadores".</div>
-          <div class="rs">CUBIERTO</div>
+          <div class="rc">Empresas que saben que necesitan un CMS y están comparando alternativas. Consumen blogs técnicos (TCO, Peak Shaving, ISO 27001).</div>
+          <div class="rs">Cubierto</div>
         </div>
         <div class="rung covered">
           <div class="rn">04</div>
           <div class="rt">Product aware</div>
-          <div class="rc">Comparan Dhemax vs. Monta vs. Wallbox. La campaña Search captura esto perfectamente (CTR 10,35%, términos de competidor con CTR altos).</div>
-          <div class="rs">CUBIERTO</div>
+          <div class="rc">Comparan Dhemax vs. Monta vs. Wallbox. Search Cargadores captura esto muy bien (CTR 10%+).</div>
+          <div class="rs">Cubierto</div>
         </div>
         <div class="rung gap">
           <div class="rn">05</div>
           <div class="rt">Most aware</div>
-          <div class="rc">Leads calientes que <em>ya pidieron demo</em> o interactuaron con ventas. Retargeting, nurturing, sequences de email, ABM.</div>
-          <div class="rs">GAP TOTAL</div>
+          <div class="rc">Leads calientes que ya tuvieron contacto con ventas. Retargeting, nurturing, secuencias de email, ABM.</div>
+          <div class="rs">Sin cobertura</div>
         </div>
       </div>
 
       <div class="highlight">
-        <strong>La cuenta compite por ~40% del funnel (Solution + Product aware) y deja 60% sin cubrir.</strong> Ese es el volumen que explicaría por qué 86.815 usuarios sólo se convierten en 91 leads. No hay contenido para los que están "despertando" a la categoría, ni para los que ya pasaron una demo y necesitan reassurance para comprar.
+        <strong>La oportunidad mayor está en expandir cobertura hacia los extremos del funnel.</strong> Contenido para Problem-aware (posts educativos de LinkedIn, webinars) puede atraer empresas en fases tempranas. Y nurturing hacia Most-aware convierte leads fríos que ya mostraron interés pero aún no compraron.
       </div>
 
-      <h3>Qué está funcionando (mantener y escalar)</h3>
+      <h3>Lo que está funcionando (mantener y escalar)</h3>
       <div class="grid-2">
         <div class="card hl">
           <h4 style="color:var(--accent)">Contenido técnico específico</h4>
-          <p><strong>Certificación ISO 27001</strong> (nov 2025): 634 views · 24 interacciones · 7,1% engagement · 2,7% CTR · 3 shares. Lejos el mejor post del año.</p>
-          <p style="font-size:12.5px;color:var(--ink-3)">Los temas tipo "ISO, TCO, Peak Shaving, integraciones técnicas" generan más interacción que cualquier otro formato.</p>
+          <p>Post sobre <strong>Certificación ISO 27001</strong> (nov 2025): 634 views, 24 interacciones, 7,1% engagement, 2,7% CTR. Lejos el mejor contenido del año.</p>
+          <p style="font-size:12.5px;color:var(--ink-3)">Fórmula probada: tema técnico concreto + valor percibido alto + audiencia profesional B2B.</p>
         </div>
         <div class="card hl">
-          <h4 style="color:var(--accent)">Storytelling humano</h4>
-          <p>Reel del CEO Andrés Barentin sobre avances tecnológicos: 709 impresiones, 47 interacciones, 15 likes, 31 clics. El segundo contenido mejor del año.</p>
-          <p style="font-size:12.5px;color:var(--ink-3)">Cara del equipo = trust. Reels cortos con expertos internos funcionan mejor que estáticos.</p>
+          <h4 style="color:var(--accent)">Storytelling con voz interna</h4>
+          <p>Reel del CEO Andrés Barentin sobre avances tecnológicos: 709 impresiones, 47 interacciones, 31 clics. Segundo mejor del año.</p>
+          <p style="font-size:12.5px;color:var(--ink-3)">La cara del equipo genera confianza. Reels cortos con expertos internos superan cualquier estático.</p>
         </div>
         <div class="card hl">
           <h4 style="color:var(--accent)">Newsletter "Carga Máxima"</h4>
-          <p>Agosto (lanzamiento): 774 views / 1.347 subs. Diciembre: 2.427 views / 67 subs.</p>
-          <p style="font-size:12.5px;color:var(--ink-3)">El consumo subió 3x pero la conversión a suscriptor cayó 20x. <strong>Hay que rediseñar el CTA post-lanzamiento.</strong></p>
-        </div>
-      </div>
-
-      <h3>Qué NO está funcionando</h3>
-      <div class="grid-2">
-        <div class="card bad">
-          <h4 style="color:var(--bad)">Contenido comercial plano</h4>
-          <p>Carrusel CMS informativo (julio): 510 imp · 9 likes · 56 clics. Estático "¿Tienes flota eléctrica?" (junio): 2.279 imp · 8 interacciones · 6 likes. <strong>Comunicar features sin historia → ignorado.</strong></p>
-        </div>
-        <div class="card bad">
-          <h4 style="color:var(--bad)">Branding genérico</h4>
-          <p>"Día contra el cambio climático" (oct): 231 imp · 4 interacciones · 1 clic. El peor reel del año. <strong>Audiencia B2B no conecta con activismo genérico sin ángulo industrial propio.</strong></p>
+          <p>Agosto (lanzamiento): 774 views · 1.347 suscriptores. Noviembre: 2.405 views · 64 suscriptores.</p>
+          <p style="font-size:12.5px;color:var(--ink-3)">El consumo crece pero el CTA de suscripción pierde fuerza. Oportunidad: rediseñar el llamado a la acción.</p>
         </div>
       </div>
 
       <h3>Nuevas líneas creativas propuestas</h3>
       <ol class="clean">
-        <li><strong>"Anatomía de un patio de carga"</strong> — Video serie 60s desmontando cómo se construye un depot eléctrico real (El Conquistador es el único caso en LATAM). Posicionamiento técnico único.</li>
-        <li><strong>"5 costos ocultos que tu cargador no te contó"</strong> — Ángulo contraintuitivo, problema-aware. Funciona en LinkedIn + Meta + YouTube Shorts.</li>
-        <li><strong>"Dhemax FM" · podcast de 20 min mensual</strong> — Entrevistas a gerentes de flotas de Bali Express, Metropol, FedEx MX. Co-branding con clientes = credibilidad + red.</li>
-        <li><strong>"Informe anual Electromovilidad Iberoamérica" (co-produce con Mobility Portal)</strong> — Trampa de backlinks, PR, leads de alto valor via descarga gated.</li>
-        <li><strong>Calculadora de ROI integrada al sitio</strong> — "Calcula cuánto ahorras con Dhemax CMS en 12 meses" → captura email + segmento (fleet size, country, ticket type).</li>
+        <li><strong>"Anatomía de un depot de carga"</strong> · serie de videos cortos desmontando cómo se diseña, implementa y opera un patio eléctrico real (El Conquistador como hero).</li>
+        <li><strong>"Los 5 costos ocultos que tu cargador no te contó"</strong> · ángulo Problem-aware, funciona en LinkedIn, Meta y YouTube Shorts.</li>
+        <li><strong>"Dhemax FM" · podcast mensual</strong> · entrevistas con gerentes de flotas de clientes actuales (Bali Express, Metropol, FedEx MX, Carris). Co-branding con clientes + red extendida.</li>
+        <li><strong>Informe anual propio "State of EV Fleets LATAM e Iberia"</strong> · en partnership con Mobility Portal o cámara sectorial. Backlinks, PR, leads cualificados por descarga gated.</li>
+        <li><strong>Calculadora de ROI integrada al sitio</strong> · input tamaño de flota y país → output ahorro estimado con Dhemax CMS + email capture.</li>
       </ol>
     </section>
 
 
-    <!-- SECTION 6 — BRAND -->
+    <!-- SECTION 7 — BRAND -->
     <section class="block" id="brand">
       <div class="section-head">
-        <div class="section-num">06 · POSICIONAMIENTO DE MARCA</div>
-        <h2>La marca dice <em>"aliado"</em>. El mercado necesita escuchar <em>"especialista"</em>.</h2>
+        <div class="section-num">07 · POSICIONAMIENTO DE MARCA</div>
+        <h2>La marca dice "aliado". El mercado necesita escuchar <em>"especialista"</em>.</h2>
+      </div>
+
+      <h3>Arquetipo de marca · ¿dónde juega Dhemax hoy?</h3>
+      <p style="font-size:13.5px">Los 12 arquetipos de marketing (Carl Jung / Margaret Mark &amp; Carol Pearson) describen las personalidades de marca más efectivas para conectar con audiencias. Un arquetipo bien definido permite que el mensaje sea consistente y reconocible.</p>
+
+      <div class="card" style="margin:20px 0">
+        <div class="chart-wrap" style="height:400px">
+          <canvas id="archetypeChart"></canvas>
+        </div>
+        <p style="font-size:12px;color:var(--ink-3);margin-top:10px;margin-bottom:0">Mapeo de Dhemax en los 12 arquetipos de marca. Los ejes cruzan Libertad ↔ Pertenencia y Ego ↔ Orden.</p>
+      </div>
+
+      <div class="archetype">
+        <div>
+          <div class="arch-role">Arquetipo dominante recomendado</div>
+          <div class="arch-name">El Sabio</div>
+          <p style="font-size:13.5px">También conocido como <em>The Sage</em>. Busca la verdad a través del conocimiento. Marcas arquetípicas: Google, BBC, IBM, McKinsey, The Economist.</p>
+          <p style="font-size:13.5px">Cuadra con Dhemax porque el cliente B2B compra <strong>certeza técnica</strong>, no emoción. La misión del Sabio es "entender el mundo para mejorarlo" — exactamente lo que Dhemax hace cuando diseña un depot o implementa un CMS.</p>
+        </div>
+        <div>
+          <h4>Arquetipo secundario · El Creador</h4>
+          <p style="font-size:13.5px">Complementa al Sabio. Dhemax no sólo analiza — también construye (software propio, soluciones a medida, plataformas integradas). El Creador aporta la dimensión de <em>hacer realidad</em> lo que el Sabio piensa.</p>
+          <h4 style="margin-top:16px">A evitar</h4>
+          <p style="font-size:13.5px">Arquetipos como <strong>El Cuidador</strong> (demasiado genérico "aliado") o <strong>El Héroe</strong> (combativo, no encaja con la consultoría técnica).</p>
+        </div>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h4>Qué dice Dhemax hoy</h4>
+          <h4>Qué comunica Dhemax hoy</h4>
           <p style="font-size:13.5px"><em>"El mejor aliado para impulsar tu transición a la electromovilidad."</em></p>
-          <p style="font-size:13px;color:var(--ink-3)">Mensaje genérico, intercambiable con Schneider, Enel, Iberdrola. "Aliado" es un adjetivo que no diferencia.</p>
+          <p style="font-size:13px;color:var(--ink-3)">Mensaje intercambiable con Schneider, Enel, consultoras big-4. La palabra "aliado" no diferencia.</p>
         </div>
         <div class="card">
-          <h4>Qué percibe el usuario</h4>
-          <p style="font-size:13.5px">"Consultoría+software para flotas eléctricas"</p>
-          <p style="font-size:13px;color:var(--ink-3)">Según leads e interacciones: <strong>instalación, software, asesoría, infraestructura.</strong> Difuso. El cliente no sabe si es SaaS, installer, consultora o todo.</p>
+          <h4>Qué percibe el mercado</h4>
+          <p style="font-size:13.5px">Mezcla difusa: "consultora de electromovilidad con software para flotas". Instalación, asesoría, cargadores, software — todo junto.</p>
+          <p style="font-size:13px;color:var(--ink-3)">La percepción actual dificulta explicar qué vende primero.</p>
         </div>
         <div class="card hl">
           <h4 style="color:var(--accent)">Qué debería comunicar</h4>
-          <p style="font-size:13.5px"><strong>"El software de carga que mueve las flotas más grandes de LATAM e Iberia."</strong></p>
-          <p style="font-size:13px;color:var(--ink-3)">Específico (software), referencial (flotas grandes = credibilidad), geográfico (dos regiones concretas), anti-commodity.</p>
+          <p style="font-size:13.5px"><strong>"El software de carga que mueve a las grandes flotas de LATAM e Iberia."</strong></p>
+          <p style="font-size:13px;color:var(--ink-3)">Específico (software), con prueba social (grandes flotas), geográfico (dos regiones concretas).</p>
         </div>
       </div>
 
       <div class="pullquote">
-        Dhemax no vende electromovilidad. Vende <strong>la certeza de que tu inversión de millones en cargadores va a producir ROI real</strong> — a través de un software que ya gestiona 60.000 cargas al mes.
+        Dhemax no vende electromovilidad. Vende la certeza de que tu inversión de millones en cargadores va a producir ROI real — a través de un software que ya gestiona 60.000 cargas al mes.
       </div>
 
-      <h3>Problema central de posicionamiento</h3>
-      <div class="highlight warn">
-        Dhemax comunica como consultora ("aliado", "acompañamos") cuando debería comunicar como <strong>producto SaaS con credenciales enterprise</strong>. El producto (CMS) es lo que escala LTV, lo que tiene margen alto, y lo que diferencia. La consultoría es el foot-in-the-door — no la tesis comercial.
-      </div>
-
-      <h3>Nueva propuesta de valor — 3 opciones para testing</h3>
+      <h3>Tres propuestas de valor para testing</h3>
       <div class="grid-3">
         <div class="card">
           <h4>Opción A · Prueba social</h4>
@@ -974,511 +1127,330 @@
         <div class="card">
           <h4>Opción B · Problem-aware</h4>
           <p style="font-size:16px;color:var(--ink);font-weight:500;font-family:Fraunces">"Tener cargadores no basta. Te ayudamos a operarlos con inteligencia."</p>
-          <p style="font-size:12px;color:var(--ink-3)">Abre el problema (el comprador sabe que el cargador solo no resuelve). Más universal.</p>
+          <p style="font-size:12px;color:var(--ink-3)">Abre el problema. El comprador sabe que instalar el cargador no resuelve nada por sí solo.</p>
         </div>
         <div class="card">
-          <h4>Opción C · Anti-lock-in</h4>
+          <h4>Opción C · Independencia del fabricante</h4>
           <p style="font-size:16px;color:var(--ink);font-weight:500;font-family:Fraunces">"El software de carga que funciona con cualquier cargador. Sin amarres."</p>
-          <p style="font-size:12px;color:var(--ink-3)">Ataca directamente a Wallbox, ChargePoint, players verticalmente integrados. Polarizante, memorable.</p>
+          <p style="font-size:12px;color:var(--ink-3)">Diferencia directa frente a Wallbox / ChargePoint / fabricantes integrados.</p>
         </div>
       </div>
 
       <h3>Territorios creativos sugeridos</h3>
       <ul class="clean">
-        <li><strong>"Operación antes que instalación"</strong> — El 90% del ROI llega DESPUÉS de instalar. Dhemax es el equipo del día después.</li>
-        <li><strong>"Agnósticos por principio"</strong> — El software que no depende del vendor. Libertad de elección como valor ideológico.</li>
-        <li><strong>"El Conquistador" como hero story</strong> — Uno de los 5 patios de carga más grandes del mundo, 100% gestionado con Dhemax CMS, en Santiago de Chile. Usar este case como el centro narrativo para LATAM.</li>
-        <li><strong>"15 años antes del hype"</strong> — Mientras la categoría estallaba, Dhemax ya llevaba 15 años. Senioridad como diferencial en un mercado lleno de nuevos.</li>
+        <li><strong>"Operación antes que instalación"</strong> · el ROI real llega después de instalar. Dhemax es el equipo del día después.</li>
+        <li><strong>"Compatible con cualquier cargador"</strong> · el software que no depende del fabricante. Libertad de elección como valor.</li>
+        <li><strong>"El Conquistador" como caso estrella</strong> · uno de los 5 depots de carga más grandes del mundo, 100% gestionado con Dhemax CMS.</li>
+        <li><strong>"15 años antes del hype"</strong> · mientras la categoría despegaba, Dhemax ya tenía trayectoria. Senioridad como diferencial.</li>
       </ul>
     </section>
 
 
-    <!-- SECTION 7 — SEO -->
+    <!-- SECTION 8 — SEO -->
     <section class="block" id="seo">
       <div class="section-head">
-        <div class="section-num">07 · SEO Y PRESENCIA ORGÁNICA</div>
-        <h2>Organic Search trae <em>11 mil sesiones</em>. Sin estrategia explícita — imagina con una.</h2>
+        <div class="section-num">08 · SEO Y PRESENCIA ORGÁNICA</div>
+        <h2>Organic Search ya trae <em>11 mil sesiones</em>. Con estructura puede dar mucho más.</h2>
       </div>
 
       <div class="grid-2">
         <div>
-          <h3>Keywords actuales de captura</h3>
+          <h3>Keywords que ya capturan tráfico</h3>
           <ul class="clean">
-            <li><strong>empresas de cargadores de coches electricos</strong> — 18 conversiones · top driver</li>
-            <li><strong>electrolineras</strong> — 5 conv · alta intención ES</li>
-            <li><strong>evergo / evergo mexico</strong> — búsqueda de competidor, CTR 22%, 6 conv total</li>
-            <li><strong>instalación de cargador auto eléctrico</strong> — 3 conv, alta intención transaccional</li>
-            <li><strong>instalacion de cargadores para autos electricos</strong> — 3 conv</li>
+            <li><strong>empresas de cargadores de coches electricos</strong> · 18 conversiones · top driver</li>
+            <li><strong>electrolineras</strong> · 5 conv · alta intención ES</li>
+            <li><strong>evergo / evergo mexico</strong> · búsqueda de competidor, CTR 22%, 6 conv total</li>
+            <li><strong>instalación de cargador auto eléctrico</strong> · 3 conv · transaccional</li>
+            <li><strong>instalacion de cargadores para autos electricos</strong> · 3 conv</li>
           </ul>
-          <p style="font-size:13px;color:var(--ink-3);margin-top:10px">El dominio tiene autoridad en 5 palabras clave transaccionales. Todas LATAM/ES mix. <strong>Brecha: ninguna keyword de "software" / "CMS" / "fleet management" está ganando.</strong></p>
+          <p style="font-size:13px;color:var(--ink-3);margin-top:10px">El dominio tiene autoridad en 5–6 keywords transaccionales relacionadas con cargadores. Ninguna keyword del "servicio grande" (CMS, gestión de flotas, software de carga) está capturando aún.</p>
         </div>
 
         <div>
-          <h3>Brechas críticas vs. competencia</h3>
+          <h3>Oportunidades de contenido SEO</h3>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Keyword</th><th>Dificultad</th><th>Oportunidad</th></tr></thead>
               <tbody>
-                <tr><td>cms para cargadores</td><td><span class="badge mid">Media</span></td><td>Alta · núcleo</td></tr>
-                <tr><td>software gestión flotas eléctricas</td><td><span class="badge mid">Media</span></td><td>Alta · producto</td></tr>
-                <tr><td>smart charging</td><td><span class="badge low">Alta</span></td><td>Media · volumen</td></tr>
+                <tr><td>cms para cargadores</td><td><span class="badge mid">Media</span></td><td>Alta · producto core</td></tr>
+                <tr><td>software gestión flotas eléctricas</td><td><span class="badge mid">Media</span></td><td>Alta · producto core</td></tr>
+                <tr><td>smart charging</td><td><span class="badge low">Alta</span></td><td>Media · volumen alto</td></tr>
                 <tr><td>peak shaving electromovilidad</td><td><span class="badge high">Baja</span></td><td>Alta · long tail</td></tr>
-                <tr><td>moves flotas</td><td><span class="badge high">Baja</span></td><td>Alta · estacional ES</td></tr>
+                <tr><td>moves flotas plus</td><td><span class="badge high">Baja</span></td><td>Alta · estacional ES</td></tr>
                 <tr><td>TCO electromovilidad</td><td><span class="badge high">Baja</span></td><td>Alta · educación</td></tr>
-                <tr><td>OCPP 1.6</td><td><span class="badge mid">Media</span></td><td>Media · técnico</td></tr>
+                <tr><td>OCPP 1.6</td><td><span class="badge mid">Media</span></td><td>Media · técnico IT</td></tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
 
-      <h3>Quick wins SEO (0-90 días)</h3>
+      <h3>Quick wins de contenido</h3>
       <ol class="clean">
-        <li><strong>Crear cluster "Moves Flotas Plus"</strong> — 1 pillar page + 6 artículos long-tail (requisitos, cómo postular, qué cubre, casos, deadline 2026, FAQ). Ventana de cosecha limitada a 6 meses.</li>
-        <li><strong>Guía "TCO en flotas eléctricas"</strong> (pillar) con calculadora interactiva — el blog de TCO ya demostró engagement, escalarlo a asset descargable gated.</li>
-        <li><strong>Hub técnico de OCPP / integraciones</strong> — único contenido en español de ese nivel, atrapa dev/IT de operadores grandes.</li>
-        <li><strong>Comparativas vs. competencia</strong> — "Dhemax vs. Monta", "Dhemax vs. Wallbox Business". Ranking rápido por bottom-funnel, aunque genere pocos visits traen leads calientes.</li>
-        <li><strong>Case studies detallados como landing SEO</strong> — El Conquistador, Bali Express, Metropol. Cada uno como página con schema.org, formulario de demo y métricas reales.</li>
+        <li><strong>Cluster temático "Moves Flotas Plus"</strong> · 1 pillar + 6 artículos long-tail (requisitos, cómo postular, qué cubre, casos, FAQ). Ventana de cosecha limitada.</li>
+        <li><strong>Guía "TCO en flotas eléctricas" con calculadora interactiva</strong> · el blog de TCO ya demostró engagement; escalarlo a asset descargable gated.</li>
+        <li><strong>Hub técnico de OCPP / integraciones</strong> · único contenido en español de ese nivel técnico, atrae a equipos de IT de operadores grandes.</li>
+        <li><strong>Comparativas "Dhemax vs..."</strong> · páginas BOFU tipo "Dhemax vs. Monta" y "Dhemax vs. Wallbox Business". Poco tráfico pero alto intent.</li>
+        <li><strong>Case studies detallados como landings SEO</strong> · El Conquistador, Bali Express, Metropol. Cada uno con schema.org y CTA de demo.</li>
       </ol>
     </section>
 
 
-    <!-- SECTION 8 — CRO -->
+    <!-- SECTION 9 — CRO -->
     <section class="block" id="cro">
       <div class="section-head">
-        <div class="section-num">08 · EXPERIENCIA DE USUARIO Y CONVERSIÓN</div>
-        <h2>86.815 usuarios entraron. 91 levantaron la mano. <em>0,10%.</em></h2>
-        <p class="section-intro">Éste es el gap más grande — y el más accionable — de toda la auditoría. No necesitas más tráfico: necesitas convertir el que ya tienes.</p>
+        <div class="section-num">09 · EXPERIENCIA DE USUARIO Y CONVERSIÓN</div>
+        <h2>Tenemos <em>muchísimo tráfico</em>. La oportunidad está en convertirlo mejor.</h2>
+        <p class="section-intro">El sitio recibió 86.815 usuarios únicos durante 2025. La calidad del tráfico es buena; la experiencia post-clic tiene espacio para reducir fricción y ayudar a que más visitantes calificados lleguen al formulario.</p>
       </div>
 
-      <h3>Funnel de conversión actual</h3>
+      <h3>Funnel de conversión web — estimación</h3>
       <div class="card">
-        <div class="funnel-row">
-          <div class="funnel-label">Usuarios nuevos</div>
-          <div class="funnel-bar" style="background:var(--grad-1)"><span class="bar-label">100%</span></div>
-          <div class="funnel-val">86.815</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Tiempo &gt; 29s (engaged)</div>
-          <div class="funnel-bar" style="background:var(--grad-1);width:65%"><span class="bar-label">65%</span></div>
-          <div class="funnel-val">~56.000</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Vieron página producto</div>
-          <div class="funnel-bar" style="background:var(--grad-1);width:40%"><span class="bar-label">40%</span></div>
-          <div class="funnel-val">~34.700</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Vieron Contacto</div>
-          <div class="funnel-bar" style="background:var(--grad-1);width:4%"><span class="bar-label">4%</span></div>
-          <div class="funnel-val">3.400</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Enviaron form</div>
-          <div class="funnel-bar" style="background:var(--grad-1);width:0.17%;min-width:10px"></div>
-          <div class="funnel-val">~150</div>
-        </div>
-        <div class="funnel-row">
-          <div class="funnel-label">Lead calificado</div>
-          <div class="funnel-bar" style="background:var(--grad-1);width:0.1%;min-width:6px"></div>
-          <div class="funnel-val">91</div>
-        </div>
+        <svg class="funnel-svg" viewBox="0 0 640 400">
+          <defs>
+            <linearGradient id="funGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#c6ff3f"/>
+              <stop offset="100%" stop-color="#25d4c8"/>
+            </linearGradient>
+          </defs>
+          <!-- Funnel stages as trapezoids -->
+          <polygon points="60,20 580,20 540,80 100,80" fill="url(#funGrad)" opacity=".92"/>
+          <polygon points="100,85 540,85 500,140 140,140" fill="url(#funGrad)" opacity=".78"/>
+          <polygon points="140,145 500,145 450,200 190,200" fill="url(#funGrad)" opacity=".64"/>
+          <polygon points="190,205 450,205 400,260 240,260" fill="url(#funGrad)" opacity=".5"/>
+          <polygon points="240,265 400,265 360,325 280,325" fill="url(#funGrad)" opacity=".36"/>
+          <polygon points="280,330 360,330 335,385 305,385" fill="url(#funGrad)" opacity=".22"/>
+
+          <!-- Labels -->
+          <text x="320" y="55" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="15">Usuarios nuevos · 86.815</text>
+          <text x="320" y="118" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="14">Engaged &gt; 29s · ~56.000</text>
+          <text x="320" y="178" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="13">Vieron página producto · ~34.700</text>
+          <text x="320" y="238" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="13">Llegaron a Contacto · ~3.400</text>
+          <text x="320" y="300" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="12">Enviaron formulario · ~150</text>
+          <text x="320" y="362" text-anchor="middle" fill="#0a0e1a" font-family="Inter Tight" font-weight="700" font-size="11">Lead paid 2025 · 101</text>
+        </svg>
+        <p style="font-size:12px;color:var(--ink-3);margin-top:8px;text-align:center">Nota: tramos intermedios son estimaciones a partir de GA4. El valor confirmado es 101 leads paid + el tráfico orgánico adicional que pasa por HubSpot. Este funnel se usa sólo como referencia visual de las fases.</p>
       </div>
 
-      <h3>Principales puntos de fuga detectados</h3>
+      <h3>Principales puntos de fuga y oportunidades</h3>
       <div class="grid-2">
         <div class="card warn">
-          <h4 style="color:var(--warn)">1. La home hace demasiadas cosas</h4>
-          <p>La home comunica 3 productos + 3 servicios + 7 KPIs + testimonials + casos + CTA. Resultado: 0,05% de conversión en home. La landing específica de cargadores-vehiculos-electricos convierte <strong>24x mejor</strong> (1,19% vs 0,05%).</p>
+          <h4 style="color:var(--warn)">1. Home multicategoría</h4>
+          <p>La home comunica hoy 3 productos + 3 servicios + 7 KPIs + testimonials + casos. El visitante tarda en entender qué es lo primero. Landing específica de cargadores convierte significativamente mejor que la home. <strong>Recomendación:</strong> reducir la carga de mensajes y destacar un CTA principal.</p>
         </div>
         <div class="card warn">
-          <h4 style="color:var(--warn)">2. No hay fricción-reducer previo al form</h4>
-          <p>Sólo existe "Contacta a nuestro equipo" / "Agendar reunión" como conversión. No hay: lead magnet (ebook, template), calculadora, diagnóstico automático, demo self-service. Todo fuerza a hablar con ventas <em>demasiado temprano</em>.</p>
+          <h4 style="color:var(--warn)">2. Falta de landings específicas por país</h4>
+          <p>Hoy el sitio es único para todos los mercados. Mensajes como MOVES Flotas Plus son específicos de España; Edomex es específico de México. <strong>Recomendación:</strong> landings país-específicas (<span class="mono">/es</span>, <span class="mono">/mx</span>, <span class="mono">/co</span>) con message-match, incentivos locales y casos de cliente de la misma geografía.</p>
         </div>
         <div class="card warn">
-          <h4 style="color:var(--warn)">3. Falta social proof contextual</h4>
-          <p>Los logos (FedEx, Mercado Libre) aparecen en la home pero no en las páginas de producto ni al lado del formulario. <strong>Conv. aumenta 15–30% añadiendo prueba social cerca del CTA.</strong></p>
+          <h4 style="color:var(--warn)">3. CTAs con alto commitment inicial</h4>
+          <p>"Agendar reunión" y "Contactar a nuestro equipo" son CTAs fuertes. Para tráfico cold, resulta un paso grande. <strong>Recomendación:</strong> ofrecer CTAs intermedios (descargar guía, usar calculadora, ver demo grabada) como puerta de entrada antes de la llamada comercial.</p>
         </div>
         <div class="card warn">
-          <h4 style="color:var(--warn)">4. Cero urgencia / escasez / incentivo</h4>
-          <p>No hay "Moves Flotas Plus expira en marzo 2026", no hay "14 días gratis del CMS", no hay "auditoría gratis de tu flota". La oferta es plana, idéntica a cualquier consultora enterprise.</p>
+          <h4 style="color:var(--warn)">4. Social proof lejos del formulario</h4>
+          <p>Los logos (FedEx, Mercado Libre) aparecen en home pero no cerca del formulario de contacto. <strong>Recomendación:</strong> añadir prueba social junto a CTAs clave — incrementa conversión 15–30% según benchmarks de CRO B2B.</p>
         </div>
         <div class="card warn">
-          <h4 style="color:var(--warn)">5. Tiempo medio de interacción: 29s</h4>
-          <p>Bajísimo para un sitio B2B técnico. Indica que el visitante escanea y se va. <strong>Necesita hooks visuales que retengan más scroll</strong> (video hero del CMS, animación de dashboard, case carousel).</p>
+          <h4 style="color:var(--warn)">5. Sin urgencia en la oferta</h4>
+          <p>No hay elementos de urgencia ni incentivos por tiempo limitado. <strong>Recomendación:</strong> campañas con fecha ("MOVES vence en marzo", "Diagnóstico gratuito este mes") elevan el sentido de acción.</p>
         </div>
         <div class="card warn">
-          <h4 style="color:var(--warn)">6. Páginas de destino no optimizadas para el ad</h4>
-          <p>Los ads de "cargadores" llegan a <span class="mono">/cargadores-vehiculos-electricos</span> — pero los de PMax y Demand Gen pueden aterrizar en home genérica, que es donde muere la intención. Message-match roto.</p>
-        </div>
-      </div>
-
-      <h3>Recomendaciones CRO priorizadas</h3>
-      <div class="prio">
-        <div class="prio-item">
-          <div class="prio-num">1</div>
-          <div>
-            <div class="prio-title">Rediseñar home con una sola CTA principal</div>
-            <div class="prio-desc">"Agenda una demo de Dhemax CMS" como CTA único arriba del fold. Todo lo demás baja a secciones secundarias. Objetivo: 2x en conv. rate a form en home.</div>
-          </div>
-          <div class="prio-meta">Impact · Alto<br>Effort · Medio</div>
-        </div>
-        <div class="prio-item">
-          <div class="prio-num">2</div>
-          <div>
-            <div class="prio-title">Lanzar calculadora interactiva de ahorro (TCO)</div>
-            <div class="prio-desc">Input: N° vehículos, tipo de flota, país. Output: estimado de ahorro anual con Dhemax CMS + email gated. Puede vivir como landing propia <span class="mono">/calcula-tu-ahorro</span>.</div>
-          </div>
-          <div class="prio-meta">Impact · Alto<br>Effort · Alto</div>
-        </div>
-        <div class="prio-item">
-          <div class="prio-num">3</div>
-          <div>
-            <div class="prio-title">Crear 3 landings país-específicas con campaña dedicada</div>
-            <div class="prio-desc"><span class="mono">/es</span> con MOVES Flotas · <span class="mono">/mx</span> con paquete fiscal Edomex · <span class="mono">/co</span> con transmilenio. Message-match con ads + testimonials locales.</div>
-          </div>
-          <div class="prio-meta">Impact · Alto<br>Effort · Medio</div>
-        </div>
-        <div class="prio-item">
-          <div class="prio-num">4</div>
-          <div>
-            <div class="prio-title">Chat en vivo con calificación</div>
-            <div class="prio-desc">Implementar un chat (Intercom / Tidio) con flujo que pre-califica: país, tamaño de flota, timing de proyecto. 15–20% de visitantes engaged tienden a abrir el chat.</div>
-          </div>
-          <div class="prio-meta">Impact · Medio<br>Effort · Bajo</div>
+          <h4 style="color:var(--warn)">6. Tiempo medio de sesión 29s</h4>
+          <p>Bajo para un sitio B2B técnico. <strong>Recomendación:</strong> hooks visuales que retengan scroll (video hero del CMS en acción, animación de dashboard, carrusel de casos reales).</p>
         </div>
       </div>
     </section>
 
 
-    <!-- SECTION 9 — DATA -->
+    <!-- SECTION 10 — DATA -->
     <section class="block" id="data">
       <div class="section-head">
-        <div class="section-num">09 · MEDICIÓN Y DATA</div>
-        <h2>El tracking funciona, pero está <em>demasiado fragmentado</em> para tomar decisiones.</h2>
+        <div class="section-num">10 · MEDICIÓN Y TRACKING</div>
+        <h2>La medición funciona. Podemos llevarla al <em>siguiente nivel</em>.</h2>
+        <p class="section-intro">Hoy el stack es Google Ads → GA4 → HubSpot, con lectura consolidada en la planilla de leads paid. El sistema está operando; las mejoras apuntan a sacarle más inteligencia a los datos que ya tenemos.</p>
       </div>
 
       <div class="grid-2">
-        <div>
-          <h3>Problemas de medición detectados</h3>
+        <div class="card hl">
+          <h4 style="color:var(--accent)">Oportunidades de optimización del stack</h4>
           <ul class="clean">
-            <li><strong>Eventos de conversión duplicados:</strong> existen <span class="mono">ads_conversion_Contactar_1</span> (207), <span class="mono">_2</span> (136), <span class="mono">generate_lead</span> (152), <span class="mono">hubspot-form-success</span> (28), <span class="mono">envio_formsubmit_form_principal</span> (16). <strong>Suman 539 eventos — pero sólo hay 91 leads "reales" en la planilla.</strong> ¿Qué es verdad?</li>
-            <li><strong>Mezcla entre MQL y SQL:</strong> no hay tagging de calidad de lead en Google Ads (offline conversion import). El algoritmo optimiza volumen aunque el lead sea "not qualified" o "descarga documento".</li>
-            <li><strong>Atribución last-click predeterminada:</strong> pese a que Cross-network genera 77K sesiones (73% del tráfico), todo se atribuye al último toque. LinkedIn orgánico y paid search se canibalizan entre sí.</li>
-            <li><strong>HubSpot sin integración bidireccional con Ads:</strong> los estados de lead (Contactado, Calificado, Cerrado) no suben a Google para feedback del algoritmo.</li>
-            <li><strong>Datos de LinkedIn desconectados:</strong> los 3.802 followers netos y 2.427 views del newsletter no se atan a leads cerrados en CRM.</li>
+            <li><strong>Offline Conversion Import desde HubSpot a Google Ads</strong> · alimentar al algoritmo con estados reales (MQL, SQL, Oportunidad, Won) para que la optimización priorice leads que realmente cierran.</li>
+            <li><strong>Consolidar evento "Lead Generado" en GA4</strong> con parámetros por tipo (demo, contacto, descarga) y por país. Facilita dashboards y comparaciones.</li>
+            <li><strong>Atribución data-driven en GA4</strong> · hoy usamos last-click por defecto. Cambiar a data-driven permite ver el rol real de LinkedIn orgánico y contenido en los cierres.</li>
+            <li><strong>UTMs estandarizadas en publicaciones sociales y newsletter</strong> · para medir con precisión cuánto del tráfico "directo" o "referral" en realidad viene de LinkedIn.</li>
           </ul>
         </div>
-        <div>
-          <h3>Riesgos en toma de decisiones</h3>
-          <div class="card bad">
-            <p><strong style="color:var(--bad)">Riesgo Alto:</strong> Reportar 539 conversiones al cliente cuando sólo 91 son leads reales genera una narrativa falsamente positiva. Al primer churn trimestral, la distorsión cae como una bomba.</p>
-          </div>
-          <div class="card warn" style="margin-top:12px">
-            <p><strong style="color:var(--warn)">Riesgo Medio:</strong> Sin offline conversion tracking, el algoritmo de Google PMax/Demand Gen optimiza para leads de baja calidad (suscripción boletín, uso personal). Esto ya pasó en mayo-julio.</p>
-          </div>
-          <div class="card warn" style="margin-top:12px">
-            <p><strong style="color:var(--warn)">Riesgo Medio:</strong> Imposible responder con datos a "¿cuál es mi CAC por país?" o "¿cuál es mi LTV:CAC real?" — y sin eso, cualquier escalamiento es opinión, no estrategia.</p>
-          </div>
+        <div class="card">
+          <h4>Dashboard único recomendado</h4>
+          <p style="font-size:13.5px">Hoy hay reportes mensuales exhaustivos pero la toma de decisión semanal se beneficiaría de un dashboard vivo. Propuesta:</p>
+          <ul class="clean">
+            <li>Leads mensuales y acumulado anual</li>
+            <li>CPL por país y por campaña</li>
+            <li>% calidad de lead (MQL / SQL / Won)</li>
+            <li>Cuota de impresiones por campaña</li>
+            <li>Engagement LinkedIn (orgánico) y views newsletter</li>
+            <li>Pipeline estimado en USD (desde HubSpot)</li>
+          </ul>
+          <p style="font-size:12.5px;color:var(--ink-3);margin-top:8px">Plataforma sugerida: Looker Studio conectado a GA4 + Ads + HubSpot. Actualización diaria, revisión semanal.</p>
         </div>
       </div>
-
-      <h3>Plan de medición recomendado</h3>
-      <ol class="clean">
-        <li><strong>Consolidar 1 único evento de "Lead Generado"</strong> en GA4 + Ads, con <em>parameters</em> para tipo de formulario (contacto, demo, descarga) y country. Deprecar el resto.</li>
-        <li><strong>Implementar Offline Conversion Import</strong> desde HubSpot a Google Ads: subir MQL (calificado), SQL (oportunidad), Win (cerrado). Esto reeduca el algoritmo en 6–8 semanas.</li>
-        <li><strong>Dashboard semanal único</strong> (Looker Studio) con: Leads, CPL por país, calidad %, pipeline generado USD, source/medium real (multi-touch).</li>
-        <li><strong>Atribución data-driven</strong> en GA4, con benchmark vs. last-click para ver qué canales están subvalorados.</li>
-        <li><strong>UTM governance</strong> estricta en todas las publicaciones de LinkedIn y emails, para atribuir orgánico social correctamente.</li>
-      </ol>
     </section>
 
 
-    <!-- SECTION 10 — ACTION PLAN -->
-    <section class="block" id="plan">
+    <!-- SECTION 11 — RECOMENDACIONES -->
+    <section class="block" id="recos">
       <div class="section-head">
-        <div class="section-num">10 · DIAGNÓSTICO FINAL Y PLAN DE ACCIÓN</div>
-        <h2>El plan de 90 días para <em>salvar y escalar</em> la cuenta.</h2>
+        <div class="section-num">11 · RECOMENDACIONES PARA DHEMAX</div>
+        <h2>Acciones internas que <em>amplifican el trabajo digital</em>.</h2>
+        <p class="section-intro">Más allá del paid, hay decisiones que Dhemax puede tomar internamente para potenciar la generación de leads y la presencia de marca. No compiten con el trabajo de la agencia — lo multiplican.</p>
       </div>
 
-      <h3>TOP 5 · Problemas críticos</h3>
-      <div class="prio">
-        <div class="prio-item critical">
-          <div class="prio-num">01</div>
-          <div>
-            <div class="prio-title">Conversión web de 0,10% — cuello principal</div>
-            <div class="prio-desc">Con 86.815 usuarios y 91 leads, el problema es fricción de funnel, no tráfico. Arreglar esto multiplica resultados sin tocar un euro de inversión adicional.</div>
-          </div>
-          <div class="prio-meta">Crítico · #1</div>
-        </div>
-        <div class="prio-item critical">
-          <div class="prio-num">02</div>
-          <div>
-            <div class="prio-title">100% del paid en un solo canal</div>
-            <div class="prio-desc">Google Ads concentra el 100% del riesgo. Un cambio de algoritmo, una caída de quality score o un competidor pujando más = cuenta comprometida. Sin diversificación, hay vulnerabilidad estructural.</div>
-          </div>
-          <div class="prio-meta">Crítico · #2</div>
-        </div>
-        <div class="prio-item critical">
-          <div class="prio-num">03</div>
-          <div>
-            <div class="prio-title">LinkedIn orgánico sin presupuesto</div>
-            <div class="prio-desc">124% engagement orgánico sin monetizar. Activo técnicamente B2B, con audiencia dirigible por cargo/industria/tamaño, ignorado por el budget paid. Pérdida de oportunidad crítica.</div>
-          </div>
-          <div class="prio-meta">Crítico · #3</div>
-        </div>
-        <div class="prio-item critical">
-          <div class="prio-num">04</div>
-          <div>
-            <div class="prio-title">Tracking con 539 "conversiones" fantasma</div>
-            <div class="prio-desc">Si el cliente descubre que 91 leads se reportan como 539+ eventos, la confianza cae. Hay que limpiar el setup ANTES de que sea un problema.</div>
-          </div>
-          <div class="prio-meta">Crítico · #4</div>
-        </div>
-        <div class="prio-item critical">
-          <div class="prio-num">05</div>
-          <div>
-            <div class="prio-title">Mensaje de marca genérico ("aliado")</div>
-            <div class="prio-desc">Intercambiable con Schneider, Enel, consultoras big-4. No construye moat. Sin un ángulo específico, Dhemax siempre será "una opción más" en pitches enterprise.</div>
-          </div>
-          <div class="prio-meta">Crítico · #5</div>
-        </div>
-      </div>
-
-      <h3>TOP 5 · Oportunidades de crecimiento</h3>
-      <div class="prio">
-        <div class="prio-item opp">
-          <div class="prio-num">01</div>
-          <div>
-            <div class="prio-title">Cosecha MOVES Flotas Plus (España)</div>
-            <div class="prio-desc">Programa público con plazos concretos 2026. Campaña dedicada + landing + cluster SEO + ABM = palanca de 25–40 leads cualificados ES en 90 días.</div>
-          </div>
-          <div class="prio-meta">Oportunidad · #1</div>
-        </div>
-        <div class="prio-item opp">
-          <div class="prio-num">02</div>
-          <div>
-            <div class="prio-title">LinkedIn Ads ABM — layer enterprise</div>
-            <div class="prio-desc">Con 20% del budget paid dirigido a 200 cuentas target (flotas top MX/CO/ES/PT), con leads ya cualificados por cargo e industria, CPL esperado: &lt; $100K con ticket 10x mayor.</div>
-          </div>
-          <div class="prio-meta">Oportunidad · #2</div>
-        </div>
-        <div class="prio-item opp">
-          <div class="prio-num">03</div>
-          <div>
-            <div class="prio-title">Calculadora TCO + lead magnet gated</div>
-            <div class="prio-desc">Content asset que convierte a un 8–15% vs 0,10% actual. Multiplicador inmediato del tráfico existente. Self-serve, escalable, sin costo por lead.</div>
-          </div>
-          <div class="prio-meta">Oportunidad · #3</div>
-        </div>
-        <div class="prio-item opp">
-          <div class="prio-num">04</div>
-          <div>
-            <div class="prio-title">Informe anual LATAM + PR engine</div>
-            <div class="prio-desc">Un reporte propio tipo "State of EV Fleets LATAM/Iberia" gana backlinks de medios, posiciona a Dhemax como autoridad, y genera ~500 leads gated descargas/año.</div>
-          </div>
-          <div class="prio-meta">Oportunidad · #4</div>
-        </div>
-        <div class="prio-item opp">
-          <div class="prio-num">05</div>
-          <div>
-            <div class="prio-title">Reposicionamiento producto-led</div>
-            <div class="prio-desc">De "consultora con software" a "software con respaldo consultivo". Web + ads + content reenfocados en CMS como hero. Expande LTV, margen, recurrencia.</div>
-          </div>
-          <div class="prio-meta">Oportunidad · #5</div>
-        </div>
-      </div>
-
-      <h3>Plan de acción 90 días</h3>
-      <div class="timeline">
-
-        <div class="t-item">
-          <div class="t-head">
-            <span class="t-range">DÍAS 0–30</span>
-            <span class="t-title">Quick wins · Higiene · Foundations</span>
-          </div>
+      <div class="grid-2">
+        <div class="card teal">
+          <h4 style="color:var(--accent-2)">1. Ecosistema digital + ferias presenciales</h4>
+          <p>Las ferias siguen siendo un canal de alto retorno en electromovilidad B2B. Cada participación puede multiplicarse con acciones digitales coordinadas: </p>
           <ul class="clean">
-            <li><strong>Consolidar tracking:</strong> un único evento "Lead Generado" en GA4 + Ads + HubSpot. Deprecar duplicados. Revisar y limpiar keywords negativas de Search Cargadores (uso residencial, educativo, particular).</li>
-            <li><strong>Subir budget en keywords ganadoras:</strong> aumentar presupuesto +40% en Search Cargadores para subir cuota de impresiones de 14% → 25%. Detener PMax MX/COL y Demand Gen (0 performance rentable).</li>
-            <li><strong>Rediseñar home:</strong> una sola CTA principal ("Agenda demo CMS"), testimonios en bloque hero, logos cerca del form. Objetivo: 2x conversion rate en home.</li>
-            <li><strong>3 landings país-específicas:</strong> /es-moves-flotas, /mx-flotas-electricas, /co-electromovilidad-corporativa, cada una con message-match del ad + case local + CTA único.</li>
-            <li><strong>Auditar y limpiar HubSpot:</strong> definir MQL/SQL criterios claros, setear offline conversion import a Google Ads.</li>
+            <li>Anunciar la asistencia con 2–3 semanas de antelación en LinkedIn orgánico + newsletter</li>
+            <li>Publicar desde el stand en tiempo real (stories, reels, updates del CEO)</li>
+            <li>Enviar follow-up email estructurado a todos los contactos en &lt; 48 horas post-feria</li>
+            <li>Retargeting en LinkedIn a asistentes del evento (lookalike de la lista de contactos)</li>
+          </ul>
+          <p style="font-size:13px;color:var(--ink-3)">Una feria bien amplificada puede duplicar los leads recuperados respecto a una asistencia "silenciosa".</p>
+        </div>
+
+        <div class="card teal">
+          <h4 style="color:var(--accent-2)">2. Contenido interno con los expertos del equipo</h4>
+          <p>Dhemax tiene +100 colaboradores expertos. Convertir ese conocimiento en contenido es un activo subutilizado:</p>
+          <ul class="clean">
+            <li>Grabar videos cortos (60–90 seg) con ingenieros explicando un concepto técnico por semana</li>
+            <li>Recopilar respuestas frecuentes de clientes en un repositorio para blog + LinkedIn</li>
+            <li>Invitar a CEO y líderes de proyecto a publicar en LinkedIn con voz propia (employee advocacy)</li>
           </ul>
         </div>
 
-        <div class="t-item mid">
-          <div class="t-head">
-            <span class="t-range">DÍAS 30–60</span>
-            <span class="t-title">Diversificación · Content engine · Posicionamiento</span>
-          </div>
+        <div class="card teal">
+          <h4 style="color:var(--accent-2)">3. Casos de éxito documentados y distribuibles</h4>
+          <p>Los logos están; los casos detallados no tanto. Dhemax podría invertir una semana en:</p>
           <ul class="clean">
-            <li><strong>Lanzar LinkedIn Ads ABM:</strong> 200 cuentas target (flotas +50 vehículos ES/MX/CO/PT). Mensajes diferenciados por segmento (transporte público, logística última milla, operadores CPO). Budget inicial: 20% del pool total.</li>
-            <li><strong>Desarrollar calculadora TCO interactiva</strong> como lead magnet principal. Gated por email + datos de flota. Promoción orgánica en LinkedIn + paid sobre audience educada.</li>
-            <li><strong>Lanzar campaña MOVES Flotas Plus</strong> en España con creativos de urgencia regulatoria, cluster SEO de 6 artículos soporte, email nurturing de 5 toques.</li>
-            <li><strong>Iniciar testing A/B de mensaje:</strong> Opción A (prueba social 60K), B (problem-aware), C (anti-lock-in). Medir CTR + form completion.</li>
-            <li><strong>Podcast "Dhemax FM"</strong> MVP con 3 episodios grabados con clientes actuales (Bali Express, Metropol, Optibus). Distribución LinkedIn + YouTube + Spotify.</li>
+            <li>Documentar 3 casos hero: El Conquistador (Santiago), un cliente mexicano, un cliente ibérico</li>
+            <li>Cada caso con datos reales de ahorro, ROI y testimonio en video del cliente</li>
+            <li>Reutilizar como landing SEO + PDF descargable + pieza de LinkedIn + anclaje en propuestas comerciales</li>
           </ul>
         </div>
 
-        <div class="t-item late">
-          <div class="t-head">
-            <span class="t-range">DÍAS 60–90</span>
-            <span class="t-title">Escala · Automatización · Pipeline predecible</span>
-          </div>
+        <div class="card teal">
+          <h4 style="color:var(--accent-2)">4. Alineación comercial – marketing</h4>
+          <p>Cada lead cerrado es una fuente de información valiosa que rara vez vuelve al marketing:</p>
           <ul class="clean">
-            <li><strong>Escalar la winning combination</strong> identificada en 30-60d: duplicar budget en el canal/mensaje/landing con mejor CPL calidad-ajustado.</li>
-            <li><strong>Automatización de nurturing:</strong> secuencia email de 7 toques para leads descarga (TCO, casos, guía MOVES, invitación a podcast, oferta demo). Objetivo: elevar MQL→SQL del 15% actual al 25%+.</li>
-            <li><strong>Retargeting cross-channel:</strong> activar retargeting en LinkedIn + Meta (para lookalikes basados en los 200 best leads) + Display (solo sobre audiencia que vio landing producto).</li>
-            <li><strong>Case study detallado de "El Conquistador"</strong> publicado como landing dedicada + video 2 min + PR en Mobility Portal. Uso como hero asset en ventas y marketing.</li>
-            <li><strong>Informe 2026 "State of EV Fleets LATAM &amp; Iberia"</strong> en producción (sacar en Q3 2026). Partnership con Mobility Portal o cámara sectorial para co-branding.</li>
-            <li><strong>Dashboard único ejecutivo</strong> con 8 KPIs clave (Leads, MQL, SQL, Pipeline USD, CAC por país, LTV proyectado, Cuota de impresiones, Engagement LinkedIn). Compartido con cliente semanalmente.</li>
+            <li>Revisión mensual entre ventas y agencia: qué leads cerraron, qué keywords los originaron, qué argumentos funcionaron</li>
+            <li>Documentar objeciones frecuentes y responderlas con contenido (FAQ, videos, páginas comparativas)</li>
+            <li>Compartir con marketing el tamaño real del pipeline para priorizar mejor las campañas</li>
           </ul>
         </div>
 
       </div>
+    </section>
+
+
+    <!-- SECTION 12 — ESCENARIOS -->
+    <section class="block" id="scen">
+      <div class="section-head">
+        <div class="section-num">12 · ESCENARIOS DE TRABAJO 2026</div>
+        <h2>Tres caminos posibles para potenciar el próximo ciclo.</h2>
+        <p class="section-intro">Cada escenario responde a un nivel de ambición y de inversión diferentes. No son excluyentes: el Escenario A puede escalar al B cuando el contexto lo permita, y el C complementa a cualquiera de los dos con trabajo interno de Dhemax.</p>
+      </div>
+
+      <div class="scen-grid">
+        <div class="scen A">
+          <div class="s-letter">A</div>
+          <div class="s-tag">Foco · Paid optimizado</div>
+          <h3>Google Ads · nueva estrategia</h3>
+          <div class="s-fee">Mantiene fee actual</div>
+          <p>Misma inversión, estrategia repensada. El objetivo es sacar más provecho del canal que hoy ya convierte, y reintroducir gradualmente el servicio grande.</p>
+          <ul>
+            <li>Consolidar Search Cargadores México como base estable</li>
+            <li>Reintroducir Search de servicio grande (CMS · consultoría) con señales de calidad de HubSpot</li>
+            <li>Subir cuota de impresiones de 14% → 25–30% en keywords ganadoras</li>
+            <li>Offline Conversion Import desde HubSpot (optimización por MQL/SQL)</li>
+            <li>Testing controlado de copies y landing por tipo de intención</li>
+            <li>Revisión quincenal + reporte mensual optimizado</li>
+            <li>Exploración puntual de reactivar Colombia si los resultados lo permiten</li>
+          </ul>
+        </div>
+
+        <div class="scen B">
+          <div class="s-letter">B</div>
+          <div class="s-tag">Foco · Paid + LinkedIn + mantención</div>
+          <h3>Paid ampliado · orgánico + soporte</h3>
+          <div class="s-fee">Implica incremento de fee</div>
+          <p>Todo lo del Escenario A, más la activación del motor orgánico y el soporte estratégico al ecosistema digital completo.</p>
+          <ul>
+            <li>Todo lo incluido en Escenario A</li>
+            <li>Grilla de contenido orgánico semanal en LinkedIn (1–2 piezas / semana con calendario editorial)</li>
+            <li>Reactivación de LinkedIn Ads con estructura ABM (audiencias por cargo + industria)</li>
+            <li>Optimización SEO on-page del sitio + cluster "Moves Flotas Plus"</li>
+            <li>Apoyo de diseño gráfico mensual para piezas sociales y landings</li>
+            <li>Mantención y pequeñas mejoras de la web (no rediseño completo)</li>
+            <li>Dashboard único en Looker Studio + QBR trimestral</li>
+          </ul>
+        </div>
+
+        <div class="scen C">
+          <div class="s-letter">C</div>
+          <div class="s-tag">Foco · Tareas para Dhemax</div>
+          <h3>Lo que Dhemax ejecuta internamente</h3>
+          <div class="s-fee">Sin cambio de fee · complementario</div>
+          <p>Acciones de alto impacto que no requieren la agencia y que amplifican cualquier escenario activo. Dhemax las lleva; la agencia puede supervisar o asesorar puntualmente.</p>
+          <ul>
+            <li>Mantener y escalar contenido orgánico de LinkedIn con voces internas</li>
+            <li>Documentar 3 casos de éxito hero con datos reales de ROI</li>
+            <li>Mantener el blog con ritmo quincenal, apalancándose en expertos del equipo</li>
+            <li>Coordinar ferias con amplificación digital pre-durante-post evento</li>
+            <li>Rediseñar landings por país con equipo interno o freelancer puntual</li>
+            <li>Implementar calculadora de ROI / TCO en el sitio</li>
+            <li>Instaurar revisiones mensuales ventas ↔ marketing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight teal" style="margin-top:32px">
+        <strong>Cómo leer los escenarios:</strong> A es el piso — mantenemos y optimizamos lo que ya funciona. B construye un motor completo de adquisición B2B. C es lo que Dhemax puede capturar por sí mismo independientemente del escenario elegido. La combinación recomendada para maximizar resultados y predictibilidad es <strong>A + C como mínimo viable</strong>, y <strong>B + C como plan de escala</strong>.
+      </div>
+    </section>
+
+
+    <!-- SECTION 13 — CONCLUSIONES -->
+    <section class="block" id="conclu">
+      <div class="section-head">
+        <div class="section-num">13 · CONCLUSIONES</div>
+        <h2>Dónde estamos, dónde podemos ir.</h2>
+      </div>
+
+      <h3>Lo que 2025 nos dejó claro</h3>
+      <ul class="clean">
+        <li><strong>El modelo funciona</strong> · pasamos de 3 países con el servicio grande y poco resultado, a un foco claro en México con Search Cargadores que entrega 19–20 leads/mes y un CPL a la baja</li>
+        <li><strong>El CPL cayó 44%</strong> en seis meses (de $173K a $77K CLP) — señal de maduración real de la cuenta</li>
+        <li><strong>El canal orgánico de LinkedIn es una mina de oro subutilizada</strong>, con 124% de engagement y +80% de crecimiento de audiencia</li>
+        <li><strong>Los datos del primer bimestre 2026</strong> (38 leads en ene+feb) ya proyectan un año mejor que 2025 si mantenemos el ritmo</li>
+      </ul>
+
+      <h3>Lo que 2026 necesita resolver</h3>
+      <ul class="clean">
+        <li><strong>Reconectar el canal ganador con el producto que Dhemax quiere vender</strong> — no quedarnos sólo en cargadores; traer de vuelta el servicio grande de forma controlada</li>
+        <li><strong>Diversificar puntos de contacto</strong> con el cliente B2B (orgánico, contenido, ferias amplificadas digitalmente) para no depender de un solo canal</li>
+        <li><strong>Mejorar la experiencia post-clic</strong>, especialmente con landings país-específicas y CTAs menos exigentes para tráfico frío</li>
+        <li><strong>Llevar la medición al siguiente nivel</strong> con Offline Conversion Import y dashboard único</li>
+      </ul>
 
       <div class="callout">
-        <h4>🎯 Recomendación estratégica clave</h4>
-        <p style="color:var(--ink);font-size:15px;line-height:1.7"><strong>Lo que hay que cambiar sí o sí para salvar la cuenta:</strong></p>
-        <p style="color:var(--ink);font-size:15px;line-height:1.7">Reposicionar la cuenta de "agencia que hace performance en Google" a <strong>"partner de crecimiento B2B con 4 motores (Search + LinkedIn + Content + CRO)"</strong>. Si seguimos vendiendo sólo ads, el cliente eventualmente verá que el techo está en 91 leads/año y buscará a alguien que le lleve el número a 300+. Si nos adelantamos <em>nosotros</em> a traer esa narrativa — con plan concreto, métricas y primeros resultados en 60 días — no sólo retenemos la cuenta sino que expandimos el contrato (content + LinkedIn + CRO = 2–3x el fee actual).</p>
-      </div>
-    </section>
-
-
-    <!-- SECTION 11 — GROWTH MANAGER -->
-    <section class="block" id="growth">
-      <div class="section-head">
-        <div class="section-num">11 · ENFOQUE GROWTH — POV DEL MANAGER</div>
-        <h2>Si esta cuenta fuera mía, esto es lo que haría esta misma semana.</h2>
-      </div>
-
-      <div class="grid-2">
-        <div>
-          <h3>Lo primero que miraría un growth manager senior</h3>
-          <ul class="clean">
-            <li><strong>No es tráfico. Es tasa de conversión.</strong> 0,10% con 86K visits es la oportunidad más grande. Todo lo demás es secundario hasta que eso suba a 0,5%+.</li>
-            <li><strong>No es Google Ads. Es dependencia de un canal.</strong> El riesgo estructural no es CPA — es que si Google cambia el quality score mañana, la cuenta pierde 95% de leads.</li>
-            <li><strong>No es creatividad. Es segmentación.</strong> El mensaje "aliado de electromovilidad" aplica igual a todos. Un fleet manager de logística en CDMX necesita escuchar distinto a un jefe de operaciones de Carris en Lisboa.</li>
-            <li><strong>No es el mensaje. Es la oferta.</strong> Todas las CTAs son "contactar equipo" — demasiada fricción. Hay que crear 3 ofertas diferenciadas por fase del funnel.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Qué eliminaría completamente (hoy)</h3>
-          <ul class="clean">
-            <li><strong>PMax México/Colombia sin señales de conversión.</strong> Drena budget hacia clics random, nunca superó ratio decente.</li>
-            <li><strong>Demand Gen como canal principal.</strong> Sin calidad de leads, sin tamaño de audiencia suficiente para que aprenda, se pausa.</li>
-            <li><strong>Campaña Moves Flotas con 0 leads.</strong> Setup actual no funciona — se rediseña desde cero con copy urgente y landing dedicada.</li>
-            <li><strong>Los 4 eventos de conversión duplicados</strong> en GA4/Ads. Sólo 1 sobrevive: "Lead Generado".</li>
-            <li><strong>El CTA "Agendar reunión"</strong> como CTA principal en home. Para un tráfico cold, es demasiado alto commitment. Baja a secondary, primario va a demo/diagnóstico.</li>
-            <li><strong>Posts genéricos de activismo</strong> (día contra el cambio climático). Sin un ángulo industrial propio = ruido.</li>
-            <li><strong>Google Ads en Chile.</strong> Si el mercado objetivo es ES+MX+CO+PT, Chile hoy absorbe tráfico (es el 6% de usuarios activos) sin estar en la meta comercial.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Decisiones del Growth Manager en los primeros 60 días</h3>
-      <div class="grid-2">
-        <div class="card hl">
-          <h4 style="color:var(--accent)">Semana 1</h4>
-          <ul style="list-style:none;padding:0">
-            <li style="padding:4px 0;font-size:13.5px">→ Reunión 1:1 con cliente: resetear expectativas y target (de 91 a 200+ leads en 2026)</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Pausa inmediata de PMax y Demand Gen</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Limpieza de eventos en GA4 + Ads</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Briefing a diseño para rediseño home + 3 landings</li>
-          </ul>
-        </div>
-        <div class="card hl">
-          <h4 style="color:var(--accent)">Semana 2–4</h4>
-          <ul style="list-style:none;padding:0">
-            <li style="padding:4px 0;font-size:13.5px">→ Lanzar la nueva home + landings país-específicas</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Implementar Offline Conversion Import desde HubSpot</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Primer A/B test de headline en ads de España (A vs B vs C)</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Aumento 40% budget en Search Cargadores (subir impression share)</li>
-          </ul>
-        </div>
-        <div class="card hl">
-          <h4 style="color:var(--accent)">Semana 5–8</h4>
-          <ul style="list-style:none;padding:0">
-            <li style="padding:4px 0;font-size:13.5px">→ Lanzar LinkedIn Ads ABM con 200 cuentas target</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Calculadora TCO en staging, testing con 10 usuarios reales</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Grabación del primer episodio de "Dhemax FM"</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Cluster SEO MOVES Flotas Plus publicado (6 artículos)</li>
-          </ul>
-        </div>
-        <div class="card hl">
-          <h4 style="color:var(--accent)">Semana 9–12</h4>
-          <ul style="list-style:none;padding:0">
-            <li style="padding:4px 0;font-size:13.5px">→ Calculadora TCO live + promoción LinkedIn Ads</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Retargeting multi-channel activado</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Nurturing automation publicado</li>
-            <li style="padding:4px 0;font-size:13.5px">→ Primera QBR con cliente con dashboard unificado</li>
-          </ul>
-        </div>
+        <h4>Mensaje final</h4>
+        <p style="color:var(--ink);font-size:15.5px;line-height:1.7">El trabajo de 2025 no fue sólo generación de leads — fue <strong>construir el aprendizaje</strong> que hoy permite tener claridad sobre qué funciona, qué no, y qué se debe probar a continuación. Esa base es un activo que vale mucho para el próximo ciclo, y la forma natural de capitalizarla es continuar el trabajo con quien ya tiene el contexto.</p>
+        <p style="color:var(--ink);font-size:15.5px;line-height:1.7;margin-top:14px">Los tres escenarios propuestos buscan que Dhemax tenga opciones claras según su ambición y su contexto: <strong>Escenario A</strong> para mantener la máquina optimizada, <strong>Escenario B</strong> para construir el motor completo, y <strong>Escenario C</strong> como trabajo interno que amplifica cualquier decisión. Nuestro objetivo es encontrar con ustedes el camino que calce — y seguir construyendo la historia que empezó hace un año.</p>
       </div>
 
       <div class="pullquote">
-        El objetivo no es escalar el gasto. Es <strong>cambiar la pregunta</strong>: pasar de "¿cómo gastamos 2M CLP mejor este mes?" a "¿cómo construimos un pipeline predecible de 30+ MQL/mes en 2026?".
+        El primer año fue aprender a generar leads. El próximo año es convertir ese aprendizaje en un motor predecible que sirva al negocio que Dhemax realmente quiere hacer crecer.
       </div>
-
-      <h3>Proyección realista (si se ejecuta todo)</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Métrica</th>
-              <th>2025 real</th>
-              <th>T1 2026</th>
-              <th>T2 2026</th>
-              <th>T3 2026</th>
-              <th>2026 completo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Leads mensuales</td>
-              <td class="num">7,5</td>
-              <td class="num">20</td>
-              <td class="num">35</td>
-              <td class="num">50+</td>
-              <td class="num good">380–450</td>
-            </tr>
-            <tr>
-              <td>CPL promedio (CLP)</td>
-              <td class="num">$176.242</td>
-              <td class="num">$140K</td>
-              <td class="num">$105K</td>
-              <td class="num">$85K</td>
-              <td class="num good">~$95K</td>
-            </tr>
-            <tr>
-              <td>Conv rate web</td>
-              <td class="num">0,10%</td>
-              <td class="num">0,25%</td>
-              <td class="num">0,45%</td>
-              <td class="num">0,60%</td>
-              <td class="num good">0,50%</td>
-            </tr>
-            <tr>
-              <td>Canales activos</td>
-              <td class="num">1</td>
-              <td class="num">2</td>
-              <td class="num">4</td>
-              <td class="num">5</td>
-              <td class="num good">Diversificado</td>
-            </tr>
-            <tr>
-              <td>MQL→SQL rate</td>
-              <td class="num">~15%</td>
-              <td class="num">18%</td>
-              <td class="num">22%</td>
-              <td class="num">28%</td>
-              <td class="num good">25%+</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p style="font-size:13px;color:var(--ink-3);margin-top:16px">Proyección conservadora. Asume ejecución disciplinada del plan + presupuesto paid equivalente a 2025 con mejor distribución. Upside posible +30% si se ganan 2–3 licitaciones grandes en España (MOVES) o México (Edomex).</p>
     </section>
 
 
@@ -1486,11 +1458,11 @@
     <footer class="doc-foot">
       <div>
         <div style="color:var(--ink);font-weight:600;margin-bottom:4px">Auditoría 360° · Dhemax</div>
-        <div>Preparado por consultoría senior growth · Abril 2026</div>
+        <div>Preparado por la agencia · Abril 2026</div>
       </div>
       <div style="text-align:right">
-        <div style="color:var(--ink)">v1.0 — Reporte ejecutivo</div>
-        <div>Confidencial — Uso interno</div>
+        <div style="color:var(--ink)">v2.0 — Diagnóstico + propuesta</div>
+        <div>Confidencial · Uso interno</div>
       </div>
     </footer>
 
@@ -1498,7 +1470,7 @@
 </div>
 
 <script>
-  // Highlight TOC
+  // TOC highlight
   const tocLinks = document.querySelectorAll('nav.toc a');
   const sections = document.querySelectorAll('section.block');
   const obs = new IntersectionObserver((entries)=>{
@@ -1512,17 +1484,26 @@
   },{rootMargin:'-30% 0px -60% 0px'});
   sections.forEach(s=>obs.observe(s));
 
+  // Smooth scroll
+  document.querySelectorAll('nav.toc a').forEach(a=>{
+    a.addEventListener('click',(e)=>{
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+
   // Chart defaults
   Chart.defaults.font.family = '"Inter Tight", sans-serif';
   Chart.defaults.color = '#a8b1c6';
   Chart.defaults.borderColor = 'rgba(255,255,255,.07)';
 
-  // Monthly chart — Inversión · Leads · CPA
+  // Monthly chart · Inversión + Leads + CPL (ene 2025 - feb 2026)
   const monthly = {
-    labels: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
-    spend:  [1746711,1462988,1511422,507357,966137,1218260,1493368,1872902,2952488,2992106,1966930,2068485],
-    leads:  [19,19,null,5,5,2,2,0,17,20,20,20],
-    cpa:    [91932,76999,null,101471,193227,609130,746684,null,173676,149605,98347,103424]
+    labels: ['Ene 25','Feb 25','Mar 25','Abr 25','May 25','Jun 25','Jul 25','Ago 25','Sep 25','Oct 25','Nov 25','Dic 25','Ene 26','Feb 26'],
+    spend:  [null,null,null,507357,966137,1218260,1493368,1872902,2952488,2992106,1966930,2068485,1746711,1462988],
+    leads:  [null,null,null,5,5,2,2,0,17,20,20,20,19,19],
+    cpa:    [null,null,null,101471,193227,609130,746684,null,173676,149605,98347,103424,91932,76999]
   };
   new Chart(document.getElementById('monthlyChart'),{
     type:'bar',
@@ -1531,19 +1512,19 @@
       datasets:[
         {
           type:'bar',label:'Inversión (CLP)',data:monthly.spend,
-          backgroundColor:'rgba(37,212,200,.25)',borderColor:'#25d4c8',borderWidth:1.5,
+          backgroundColor:'rgba(37,212,200,.22)',borderColor:'#25d4c8',borderWidth:1.5,
           yAxisID:'y',borderRadius:4
         },
         {
           type:'line',label:'Leads',data:monthly.leads,
           borderColor:'#c6ff3f',backgroundColor:'#c6ff3f',borderWidth:2.5,
-          pointRadius:5,pointBackgroundColor:'#c6ff3f',tension:.2,
+          pointRadius:5,pointBackgroundColor:'#c6ff3f',tension:.25,
           yAxisID:'y1'
         },
         {
-          type:'line',label:'CPA (CLP)',data:monthly.cpa,
+          type:'line',label:'CPL (CLP)',data:monthly.cpa,
           borderColor:'#ff7a59',backgroundColor:'#ff7a59',borderWidth:2,borderDash:[5,5],
-          pointRadius:4,pointBackgroundColor:'#ff7a59',tension:.2,
+          pointRadius:4,pointBackgroundColor:'#ff7a59',tension:.25,
           yAxisID:'y'
         }
       ]
@@ -1573,15 +1554,37 @@
     }
   });
 
-  // Campaign distribution
+  // Campaign distribution (real data from planilla)
+  // 2025 (101 leads): Campaña Cargadores MX concentra la mayoría Q3/Q4 + campañas varias en H1
+  // Q1 2026 (38 leads): 20 Campaña Cargadores MX + 13 campañas España (traspaso) + 2 Search Esp + 2 PMax Esp + 1 tráfico directo
   new Chart(document.getElementById('campChart'),{
     type:'bar',
     data:{
-      labels:['Search Cargadores MX','Search Cargadores España','PMax MX/COL','PMax España','Demand Gen MX/COL','Demand Gen España','Moves Flotas','Search C2 LATAM'],
+      labels:[
+        'Campaña Cargadores (México)',
+        'Campaña España (traspaso)',
+        'PMax Cargadores MX/COL (H1 2025)',
+        'PMax Leads (H1 2025)',
+        'Demand Gen MX/COL (H1 2025)',
+        'Demand Gen España (H1 2025)',
+        'Campaña Search Esp',
+        'PMax España',
+        'Otros (orgánico/directo calif.)'
+      ],
       datasets:[{
         label:'Leads generados',
-        data:[47,22,8,4,4,1,1,4],
-        backgroundColor:['#c6ff3f','#25d4c8','#f4c152','#f4c152','#ff7a59','#ff7a59','#ff4d6d','#6b7590'],
+        data:[75, 18, 10, 5, 4, 1, 2, 3, 21],
+        backgroundColor:[
+          '#c6ff3f',
+          '#25d4c8',
+          '#f4c152',
+          '#f4c152',
+          '#ff7a59',
+          '#ff7a59',
+          '#25d4c8',
+          '#25d4c8',
+          '#6b7590'
+        ],
         borderRadius:6
       }]
     },
@@ -1599,13 +1602,95 @@
     }
   });
 
-  // Smooth scroll
-  document.querySelectorAll('nav.toc a').forEach(a=>{
-    a.addEventListener('click',(e)=>{
-      e.preventDefault();
-      const t = document.querySelector(a.getAttribute('href'));
-      if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
-    });
+  // Bubble chart · competitive positioning
+  // x = software focus (0-10), y = LATAM/Iberia focus (0-10), r = size/reach
+  const bubbleData = {
+    datasets: [
+      {label:'Dhemax', data:[{x:8, y:9, r:22}], backgroundColor:'rgba(198,255,63,.85)', borderColor:'#c6ff3f', borderWidth:2},
+      {label:'Monta', data:[{x:9.5, y:2, r:20}], backgroundColor:'rgba(37,212,200,.5)'},
+      {label:'AmpControl', data:[{x:9, y:1, r:12}], backgroundColor:'rgba(37,212,200,.5)'},
+      {label:'Wallbox', data:[{x:5, y:5, r:26}], backgroundColor:'rgba(244,193,82,.5)'},
+      {label:'Iberdrola bp pulse', data:[{x:3, y:8, r:30}], backgroundColor:'rgba(244,193,82,.5)'},
+      {label:'Evergo', data:[{x:3, y:7, r:16}], backgroundColor:'rgba(244,193,82,.5)'},
+      {label:'VEGA Chargers', data:[{x:2, y:6, r:10}], backgroundColor:'rgba(255,122,89,.5)'},
+      {label:'Enel X Way', data:[{x:4, y:7.5, r:24}], backgroundColor:'rgba(244,193,82,.5)'},
+      {label:'Schneider Electric', data:[{x:4, y:5, r:26}], backgroundColor:'rgba(244,193,82,.5)'},
+      {label:'Virta', data:[{x:9, y:2, r:14}], backgroundColor:'rgba(37,212,200,.5)'},
+      {label:'Driivz', data:[{x:9.5, y:1.5, r:12}], backgroundColor:'rgba(37,212,200,.5)'},
+      {label:'ChargePoint', data:[{x:7, y:2, r:26}], backgroundColor:'rgba(168,177,198,.5)'}
+    ]
+  };
+  new Chart(document.getElementById('bubbleChart'),{
+    type:'bubble',
+    data:bubbleData,
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{position:'bottom',labels:{boxWidth:10,padding:8,font:{size:11}}},
+        tooltip:{
+          backgroundColor:'#0f1525',titleColor:'#e8ecf5',bodyColor:'#a8b1c6',
+          callbacks:{
+            label:(c)=>c.dataset.label
+          }
+        }
+      },
+      scales:{
+        x:{
+          min:0,max:10,
+          title:{display:true,text:'Enfoque en software (CMS) →',color:'#6b7590',font:{size:11}},
+          grid:{color:'rgba(255,255,255,.04)'},
+          ticks:{display:false}
+        },
+        y:{
+          min:0,max:10,
+          title:{display:true,text:'Presencia en LATAM / Iberia →',color:'#6b7590',font:{size:11}},
+          grid:{color:'rgba(255,255,255,.04)'},
+          ticks:{display:false}
+        }
+      }
+    }
+  });
+
+  // Archetype radar
+  new Chart(document.getElementById('archetypeChart'),{
+    type:'radar',
+    data:{
+      labels:['El Sabio','El Creador','El Gobernante','El Cuidador','El Héroe','El Explorador','El Rebelde','El Mago','El Amante','El Bufón','El Inocente','El Hombre Común'],
+      datasets:[{
+        label:'Perfil Dhemax (recomendado)',
+        data:[9.5, 8, 7, 5, 4, 3, 2, 6, 2, 2, 3, 4],
+        backgroundColor:'rgba(198,255,63,.2)',
+        borderColor:'#c6ff3f',
+        borderWidth:2,
+        pointBackgroundColor:'#c6ff3f',
+        pointRadius:4
+      },{
+        label:'Perfil actual (percibido)',
+        data:[5, 5, 4, 7, 3, 4, 2, 4, 2, 2, 4, 6],
+        backgroundColor:'rgba(37,212,200,.12)',
+        borderColor:'#25d4c8',
+        borderWidth:1.5,
+        borderDash:[5,5],
+        pointBackgroundColor:'#25d4c8',
+        pointRadius:3
+      }]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{position:'bottom',labels:{boxWidth:12,padding:14,font:{size:12}}},
+        tooltip:{backgroundColor:'#0f1525',titleColor:'#e8ecf5',bodyColor:'#a8b1c6'}
+      },
+      scales:{
+        r:{
+          min:0,max:10,
+          angleLines:{color:'rgba(255,255,255,.08)'},
+          grid:{color:'rgba(255,255,255,.06)'},
+          pointLabels:{color:'#a8b1c6',font:{size:11}},
+          ticks:{display:false,stepSize:2}
+        }
+      }
+    }
   });
 </script>
 
